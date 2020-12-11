@@ -1,0 +1,141 @@
+$color-blue: blue;
+$bg-color: #f1f1f1;
+section {
+    background-color: $bg-color;
+    h2 {
+        color: $color-blue;
+    }
+}
+
+.main {
+    margin: 0 auto;
+    width: 600px;
+    .section {
+        padding: 20px;
+    }
+    .info {
+        background-color: #ccc;
+    }
+}
+body {
+    font: {
+        family: Arial, sans-serif;
+        size: 16px;
+    }
+}
+
+$a: 20px;
+$b: $a + 30px;
+#main {
+    margin-bottom: $a;
+}
+#footer {
+    padding: $a;
+}
+// This is an error so the variables can not declare in the sellector scope
+#main-footer {
+    $a : 20px;
+    margin-bottom: $a;
+}
+
+#footer-item {
+    padding: $a;
+}
+// END: comment
+
+section {
+    width: 300px;
+    h2 {
+        font-size: 12px;
+    }
+    div {
+        padding: 20px;
+    }
+}
+
+#main {
+    width: 300px;
+    h2 {
+        font-size: 12px;
+    }
+    .list {
+        padding: 20px;
+        li {
+            background-color: #f1f1f1;
+        }
+    }
+}
+
+.btn-submit {
+    width: 100px;
+    background-color: red;
+    &:hover {
+        background-color: blue;
+    }
+}
+
+.list {
+    margin-bottom: 20px;
+    &.list-last {
+        margin-bottom: 0px;
+    }
+}
+
+.list {
+    margin-bottom: 20px;
+    li {
+        float: left;
+        margin-right: 10px;
+        &.last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+section {
+    width: 300px;
+    font: {
+        family: Arial, sans-serif;
+        size: 16px;
+    } 
+    h2 {
+        font-size: 20px;
+    }
+    div {
+        padding: 20px;
+    }
+}
+
+#main {
+    width: 300px;
+    @media only screen and (min-width: 641px){
+        width: 200px;
+    }
+}
+
+.box {
+    background-color: #f1f1ff;
+    border: 1px solid #ccc;
+}
+.section {
+    @extend .box;
+    padding: 20px;
+}
+
+p.box {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+div.section {
+    @extend p.box;
+    padding: 20px;
+}
+
+p.box {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+.list {
+    @extend .box;
+    padding: 20px;
+}

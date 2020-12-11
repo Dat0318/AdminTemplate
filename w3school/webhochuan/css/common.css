@@ -1,0 +1,296 @@
+section.content .info, section.content nav.sidebar {
+  font-size: 0.8em;
+}
+
+.content nav.sidebar {
+  padding: 30px;
+}
+
+/* Can not extends from the father because we have an error about syntex
+section.content .info {
+    font-size: 0.8 em;
+}
+
+.content nav.sidebar {
+    @extend section.content .info;
+    padding: 30px;
+}
+END: comment
+*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f1f1f1;
+}
+
+ul li {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.main {
+  margin: 0 auto;
+  width: 300px;
+  padding: 20px;
+}
+
+.box {
+  margin: 0 auto;
+  width: 100px;
+  background-color: #f1f1f1;
+}
+
+.main {
+  margin: 0 auto;
+  width: 300px;
+  color: red;
+  padding: 20px;
+}
+
+.box {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 24px;
+  background-color: #f1f1f1;
+}
+
+.main {
+  -webkit-box-shadow: 3px 3px 2px blue;
+  -moz-box-shadow: 3px 3px 2px blue;
+  -ms-box-shadow: 3px 3px 2px blue;
+  box-shadow: 3px 3px 2px blue;
+  padding: 20px;
+}
+
+.box {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background-color: #f1f1f1;
+}
+
+ul, div {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+ul {
+  background-color: #f1f1f1;
+}
+
+ul li {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/*
+Do thuoc tinh chat gom su dung chung cac thuoc tinh nen placeholder khong su dung cho doi so
+$center2($w2) {
+    margin: 0 auto;
+    width: $w2;
+}
+
+$center1($w) {
+    margin: 0 auto;
+    width: $w; 
+}
+.main {
+    @extend $center1(300px);
+    padding: 20px;
+}
+.box {
+    @extend $center(100px);
+    background-color: #f1f1f1;
+}
+*/
+.list {
+  width: 600px;
+}
+
+.list li {
+  float: left;
+  width: 150px;
+}
+
+.two-cols {
+  width: 50%;
+}
+
+.three-cols {
+  width: 33.33333%;
+}
+
+.four-cols {
+  width: 25%;
+}
+
+.five-cols {
+  width: 20%;
+}
+
+#main {
+  position: relative;
+}
+
+#main .box01 {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+
+#main .box02 {
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+}
+
+#main01 {
+  border-radius: 0;
+  border-top-left-radious: 4px;
+  border-top-right-radious: 4px;
+}
+
+.item-1 {
+  opacity: 1;
+}
+
+.item-2 {
+  opacity: 0.5;
+}
+
+.item-3 {
+  opacity: 0.33333;
+}
+
+.item-4 {
+  opacity: 0.25;
+}
+
+.item-5 {
+  opacity: 0.2;
+}
+
+.col-1 {
+  width: 12.5%;
+}
+
+.col-2 {
+  width: 25%;
+}
+
+.col-3 {
+  width: 37.5%;
+}
+
+.col-4 {
+  width: 50%;
+}
+
+.col-5 {
+  width: 62.5%;
+}
+
+.col-6 {
+  width: 75%;
+}
+
+.col-7 {
+  width: 87.5%;
+}
+
+.col-8 {
+  width: 100%;
+}
+
+ul:nth-child(3n + 1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n + 2) {
+  background-color: #004d99;
+}
+
+ul:nth-child(3n + 3) {
+  background-color: #0059b3;
+}
+
+.item-4 {
+  width: 200px;
+}
+
+.item-3 {
+  width: 266.66667px;
+}
+
+.item-2 {
+  width: 400px;
+}
+
+.item-1 {
+  width: 800px;
+}
+
+.item-3 {
+  color: red;
+}
+
+.item-4 {
+  color: red;
+}
+
+.iccon-40px {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.iccon-50px {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.iccon-80px {
+  font-size: 80px;
+  height: 80px;
+  width: 80px;
+}
+
+.normal {
+  font-weight: bold;
+  text-emphasis: 10px;
+}
+
+.emphasis {
+  font-weight: bold;
+  text-emphasis: 15px;
+}
+
+.default {
+  font-weight: normal;
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+.box {
+  padding: 20px;
+  line-height: 0;
+}
+
+p, div {
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  color: red;
+}
+
+.list li {
+  font-size: 14px;
+}

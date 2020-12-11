@@ -1,0 +1,150 @@
+section {
+  background-color: #f1f1f1;
+}
+
+section h2 {
+  color: blue;
+}
+
+.main {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.main .section {
+  padding: 20px;
+}
+
+.main .info {
+  background-color: #ccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+#main {
+  margin-bottom: 20px;
+}
+
+#footer {
+  padding: 20px;
+}
+
+#main-footer {
+  margin-bottom: 20px;
+}
+
+#footer-item {
+  padding: 20px;
+}
+
+section {
+  width: 300px;
+}
+
+section h2 {
+  font-size: 12px;
+}
+
+section div {
+  padding: 20px;
+}
+
+#main {
+  width: 300px;
+}
+
+#main h2 {
+  font-size: 12px;
+}
+
+#main .list {
+  padding: 20px;
+}
+
+#main .list li {
+  background-color: #f1f1f1;
+}
+
+.btn-submit {
+  width: 100px;
+  background-color: red;
+}
+
+.btn-submit:hover {
+  background-color: blue;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.list.list-last {
+  margin-bottom: 0px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.list li {
+  float: left;
+  margin-right: 10px;
+}
+
+.list li.last-child {
+  margin-right: 0;
+}
+
+section {
+  width: 300px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+section h2 {
+  font-size: 20px;
+}
+
+section div {
+  padding: 20px;
+}
+
+#main {
+  width: 300px;
+}
+
+@media only screen and (min-width: 641px) {
+  #main {
+    width: 200px;
+  }
+}
+
+.box, .section, .list {
+  background-color: #f1f1ff;
+  border: 1px solid #ccc;
+}
+
+.section {
+  padding: 20px;
+}
+
+p.box, p.section, div.section, p.list {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+div.section {
+  padding: 20px;
+}
+
+p.box, p.section, div.section, p.list {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+.list {
+  padding: 20px;
+}

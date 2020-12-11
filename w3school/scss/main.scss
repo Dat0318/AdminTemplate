@@ -1,0 +1,14 @@
+@import "variables";
+@import "colors";
+@import "reset";
+
+body {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    color: $myBlue;
+}
+
+.danger {
+    @include important-text();
+    background-color: green;
+}

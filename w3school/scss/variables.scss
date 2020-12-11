@@ -1,0 +1,67 @@
+@mixin important-text {
+    color : red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+}
+
+// mixin can also include oether mixin
+
+@mixin link {
+
+}
+@mixin spencial-border {
+
+}
+@mixin special-text {
+    @include important-text();
+    @include spencial-border();
+    @include link();
+}
+
+// Passing variables to a mixin
+// Mixin accept arguments. This way you can pass variables to a mixin
+// Here is how to define a mixin with arguments
+// Define mixin with to argument
+@mixin bordered($color : blue, $width : 1px) {
+    // It is also possible to define default values for mixin variables
+    border : $width solid $color;
+}
+
+.myArticle {
+    @include bordered(blue, 1px);  // Call mixin width two values
+}
+
+.myNotes {
+    @include bordered(red, 2px); // Call mixin with two values
+}
+
+// Using a mixin for vendor prefixes
+// Another good use of a mixin is for vendor prefixes
+// here is an example for transform
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+.myBox {
+    @include transform(rotate(20deg));
+}
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button-report {
+    @extend .button-basic;
+    background-color: red;
+}
+
+.button-submit {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}
