@@ -1,0 +1,310 @@
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.orange-important {
+    color: rgb(255, 115, 0) !important;
+}
+
+:root,
+html[theme=default] {
+    --font-family-base: Gotham SSm, Helvetica, Arial, sans-serif;
+    --font-family-monospace: Menlo, Monaco, Consolas, Courier New, monospace;
+    --font-family-rebrand: Canela Deck Bold;
+    --brand-primary: rgb(255, 115, 0);
+    --brand-primary-light: #a4dd83;
+    --brand-primary-lightest: #ebf7ec;
+    --brand-success: rgb(255, 115, 0);
+    --brand-info: rgb(255, 115, 0);
+    --brand-complimentary: #14bff4;
+    --brand-complimentary-dark: #008eaf;
+    --brand-complimentary-darkest: #1d4354;
+    --brand-domestic: #2579e7;
+    --brand-warning: #e6a01e;
+    --brand-danger: #d50000;
+    --brand-accent: #cdc52d;
+    --brand-marketing: rgb(255, 115, 0);
+    --brand-marketing-up: rgb(255, 115, 0);
+    --black: #000;
+    --gray-1: #222;
+    --gray-2: #656565;
+    --gray-4: #e0e0e0;
+    --gray-5: #f2f2f2;
+    --gray-6: #f9f9f9;
+    --text-inverse: var(--white);
+    --bg-inverse: var(--white);
+    --border-inverse: var(--white);
+    --border-base: 1px solid var(--border-4);
+    --radius: 2px;
+    --transparent: transparent;
+    --transparent-inverse: hsla(0, 0%, 100%, 0);
+    --semi-transparent-inverse: hsla(0, 0%, 98%, .9)
+}
+
+:root,
+html[theme=dark],
+html[theme=default] {
+    --white: #fff;
+    --gray-3: #a0a0a0;
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-2);
+    --text-3: var(--gray-3);
+    --text-4: var(--gray-4);
+    --text-5: var(--gray-5);
+    --bg-1: var(--gray-1);
+    --bg-2: var(--gray-2);
+    --bg-3: var(--gray-3);
+    --bg-4: var(--gray-4);
+    --bg-5: var(--gray-5);
+    --bg-6: var(--gray-6);
+    --border-4: var(--gray-4);
+    --link-color: var(--brand-primary);
+    --link-hover-color: var(--brand-info);
+    --placeholder: var(--text-2)
+}
+
+html[theme=dark] {
+    --black: #272727;
+    --gray-1: #eee;
+    --gray-2: #d5d5d5;
+    --gray-4: #353535;
+    --gray-5: #222;
+    --gray-6: #212121;
+    --text-inverse: var(--black);
+    --bg-inverse: var(--black);
+    --border-inverse: var(--black);
+    --transparent: hsla(0, 0%, 100%, 0);
+    --transparent-inverse: transparent;
+    --semi-transparent-inverse: rgba(6, 6, 6, .9)
+}
+
+up-c-modal.auth-modal-with-alerts {
+    --modal-mobile-body-padding: 0 15px 15px;
+    --modal-body-padding: 0 30px 30px
+}
+
+.auth-checkbox:last-of-type label {
+    border-bottom: none!important
+}
+
+@media (max-width:767px) {
+    .checkbox.last-visible-child label,
+    .radio.last-visible-child label {
+        border-bottom: none;
+        border-top: 1px solid #e0e0e0
+    }
+    .auth-btn-row-half {
+        flex: 0.5 0 auto;
+        display: flex
+    }
+    .auth-growable-flex {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column
+    }
+    [data-ng-app=account-security-ui] .layout-page-content,
+    body.auth-page .layout-page-content {
+        display: flex;
+        height: 100%
+    }
+}
+
+.m-auto-right {
+    margin-right: auto
+}
+
+.height-icon-size-md {
+    height: 30px
+}
+
+.auth-sz-block {
+    z-index: 1510!important
+}
+
+.auth-select-block,
+.auth-sz-block {
+    display: block!important
+}
+
+.auth-select .btn-group.dropdown,
+.auth-select .dropdown-toggle {
+    width: 100%!important
+}
+
+.auth-illustration {
+    max-width: 145px;
+    max-height: 130px
+}
+
+.auth-popup-list {
+    padding-left: 14px
+}
+
+.auth-popup-list li {
+    padding-left: 10px
+}
+
+p.google-sso-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: .1em;
+    font-weight: 300
+}
+
+p.google-sso-separator span {
+    padding: 0 10px;
+    background: #fff;
+    color: #606060
+}
+
+.google-sso-container {
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+    transition: background-color .218s, border-color .218s, box-shadow .218s;
+    -webkit-user-select: none;
+    -webkit-appearance: none;
+    background-color: #4285f4;
+    background-image: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding-right: 38px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto
+}
+
+.google-sso-container:hover {
+    -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+    box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+    background-color: #4285f4
+}
+
+.google-sso-container:active {
+    background-color: #3367d6
+}
+
+.google-sso-container .google-sso-content {
+    border: 1px solid transparent
+}
+
+.google-sso-container .google-sso-icon {
+    background-color: #fff;
+    -webkit-border-radius: 1px;
+    border-radius: 1px
+}
+
+.google-sso-icon {
+    float: left;
+    padding: 10px
+}
+
+.google-sso-icon-container {
+    width: 18px;
+    height: 18px
+}
+
+.google-sso-icon-container svg {
+    display: block
+}
+
+.google-sso-button-content {
+    font-size: 14px;
+    line-height: 38px;
+    letter-spacing: .22px;
+    vertical-align: top;
+    margin: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto
+}
+
+.google-sso-content {
+    height: 40px;
+    width: 100%
+}
+
+.google-sso-linked-app header>div {
+    align-items: center;
+    display: flex
+}
+
+.google-sso-linked-app div.d-lg-none google-sso {
+    width: 100%
+}
+
+.ng-animate.no-animate {
+    transition: none 0s;
+    -webkit-transition: none 0s;
+    animation: 0s none;
+    -webkit-animation: 0s none
+}
+
+.unlink-account-modal {
+    --modal-header-display: none;
+    --modal-mobile-header-height: 0;
+    --modal-mobile-body-padding: 25px
+}
+
+.login-mobile-logo {
+    max-width: 185px
+}
+
+.line-heading {
+    overflow: hidden;
+    text-align: center
+}
+
+.line-heading:after,
+.line-heading:before {
+    background-color: #8f8e8e;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%
+}
+
+.line-heading:before {
+    right: 10px;
+    margin-left: -50%
+}
+
+.line-heading:after {
+    left: 10px;
+    margin-right: -50%
+}
+
+.no-border {
+    border: none!important
+}
+
+@media (max-width:767px) {
+    #layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch
+    }
+}
+
+.position-relative {
+    position: relative
+}
+
+.position-absolute {
+    position: absolute
+}

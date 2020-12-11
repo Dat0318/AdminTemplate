@@ -1,0 +1,214 @@
+.http-call-modal-window,
+.http-call-modal-window * {
+  background-color: transparent !important;
+  border-width: 0 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.http-call-modal-window .modal-content {
+  overflow: visible;
+}
+.hr-dash-widget {
+  width: 100%;
+  height: 550px;
+  border: 0;
+}
+.stretched-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+.stretched-modal .modal-content .modal-body {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .hr-dash-widget {
+    height: 0;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width: 0;
+  }
+  .hr-dash-widget-modal .modal-dialog {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 !important;
+  }
+  .hr-dash-widget-modal .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+#submitWorkFiles button {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#submitWorkFiles .file-upload-list {
+  padding-left: 0;
+  margin-top: 10px;
+}
+.blueberry {
+  color: #14bff4;
+}
+.granite {
+  color: #a0a0a0;
+}
+.wm-font-weight-normal {
+  font-weight: normal !important;
+}
+.ng-hide {
+  display: none !important;
+}
+.disable-capitalize {
+  text-transform: none !important;
+}
+.mh200 {
+  min-height: 200px;
+}
+.w350 {
+  width: 350px;
+}
+.w380 {
+  width: 380px;
+}
+.w450 {
+  width: 450px;
+}
+.wm-cursor-pointer {
+  cursor: pointer !important;
+}
+.wm-flex-direction-column {
+  flex-direction: column;
+}
+.modal-body .wmAlert.alert {
+  margin: 10px 0 30px 0 !important;
+}
+.animation-delay {
+  animation-delay: 200ms;
+}
+.display-inline {
+  display: inline !important;
+}
+.full-page-loading-simulation {
+  margin-top: 50%;
+}
+_:-ms-fullscreen,
+:root .modal-sticky .overflow-y-auto.modal-flex-container {
+  display: block !important;
+}
+@media (min-width: 768px) {
+  _:-ms-fullscreen,
+  :root .modal-sticky .modal-dialog {
+    height: 100%;
+  }
+}
+.modal-overlay .modal-content {
+  height: auto;
+}
+
+.z-index-100 {
+  z-index: 100 !important;
+}
+#submitWorkFiles ul.list-unstyled button.close {
+  color: rgb(255, 115, 0);
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+.margin-left-auto {
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .search-box-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 300;
+  }
+}
+.wm-pl-40 {
+  padding-left: 40px !important;
+}
+
+.checkbox-replacement-helper {
+  margin-right: 5px !important;
+}
+
+.up-disintermediation-container {
+  position: relative;
+  padding-top: 1px;
+  margin-top: -1px;
+}
+.up-disintermediation-container textarea {
+  overflow-clip-box: padding-box;
+}
+.up-disintermediation-highlighter {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: solid transparent;
+  display: block;
+  color: transparent;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.up-disintermediation-highlighter span,
+.up-disintermediation-highlighter mark {
+  white-space: pre-wrap;
+  color: transparent;
+}
+.up-disintermediation-inline-callout {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 0 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-top-width: 0 !important;
+}
+.up-disintermediation-inline-callout .call-to-action button {
+  margin-bottom: 0;
+}
+.up-disintermediation-inline-callout .title {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.up-disintermediation-inline-callout button.close {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  color: rgb(255, 115, 0);
+}
+.up-disintermediation-popover .call-to-action {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.up-disintermediation-popover .call-to-action .btn-link {
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .up-disintermediation-popover .call-to-action {
+    flex-wrap: wrap;
+  }
+  .up-disintermediation-popover .call-to-action .btn {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@supports (-webkit-overflow-scrolling: touch) {
+  .up-disintermediation-highlighter {
+    transform: translateX(3px);
+  }
+}

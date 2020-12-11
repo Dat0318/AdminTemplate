@@ -1,0 +1,106 @@
+.rate-guidance-body .up-flbid-arrow {
+  height: 50px;
+  width: 80px;
+  margin-top: -40px;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4yLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA2Mi45IDQxLjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYyLjkgNDEuNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6Izk5OTk5OTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQoJLnN0MXtmaWxsOiM5OTk5OTk7fQ0KPC9zdHlsZT4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMC41LDBjMCwyMC4yLDI0LjksMzYuNyw1Ni44LDM4LjUiLz4NCgkJPGc+DQoJCQk8cG9seWdvbiBjbGFzcz0ic3QxIiBwb2ludHM9IjYyLjksMzguNiA1NC45LDQxLjYgNTYuOSwzOC40IDU1LjEsMzUuMSAJCQkiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);
+}
+.rate-guidance-body .up-flbid-arrow.mobile {
+  left: -50px;
+}
+up-rate-widget,
+up-rate-widget-info,
+up-rate-widget-milestone,
+up-rate-widget-wrapper {
+  display: block;
+}
+up-rate-widget .fs-lg,
+up-rate-widget-info .fs-lg,
+up-rate-widget-milestone .fs-lg,
+up-rate-widget-wrapper .fs-lg {
+  font-size: 16px !important;
+}
+up-rate-widget .hourly-rate,
+up-rate-widget-info .hourly-rate,
+up-rate-widget-milestone .hourly-rate,
+up-rate-widget-wrapper .hourly-rate {
+  line-height: 42px !important;
+  padding-left: 10px !important;
+}
+up-rate-widget .rate-help-text,
+up-rate-widget-info .rate-help-text,
+up-rate-widget-milestone .rate-help-text,
+up-rate-widget-wrapper .rate-help-text {
+  font-weight: normal !important;
+}
+up-rate-widget input.form-control[disabled],
+up-rate-widget-info input.form-control[disabled],
+up-rate-widget-milestone input.form-control[disabled],
+up-rate-widget-wrapper input.form-control[disabled] {
+  background: transparent;
+  border-color: transparent;
+}
+
+/*cleanup CI-3587*/
+up-rate-widget .form-group:not(.has-error) .form-control.ng-dirty.ng-invalid {
+  border-color: #e0e0e0 !important;
+}
+
+up-rate-widget
+  .form-group:not(.has-error)
+  .form-control.ng-dirty.ng-invalid:hover,
+up-rate-widget
+  .form-group:not(.has-error)
+  .form-control.ng-dirty.ng-invalid:focus {
+  border-color: rgb(255, 115, 0) !important;
+}
+
+up-rate-widget input[disabled] {
+  pointer-events: none;
+  border: 0 none;
+}
+
+up-rate-widget input[type='number']::-webkit-outer-spin-button,
+up-rate-widget input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+up-rate-widget input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+up-rate-widget .form-group.has-feedback.fe-currency {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+body > .popover {
+  z-index: 9999999999;
+}
+
+.input-group-rate {
+  white-space: nowrap;
+}
+.input-group-rate.with-hr {
+  padding-right: 35px;
+}
+.input-group-rate .form-control {
+  width: 100%;
+}
+.input-group-rate .input-group-hours,
+.input-group-rate .form-control {
+  display: inline-block;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+up-rate-widget a.popover-link:hover {
+  text-decoration: none;
+}
+.globe {
+  width: 100px;
+  height: 100px;
+}

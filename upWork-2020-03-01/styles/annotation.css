@@ -1,0 +1,200 @@
+/*
+TODO: a lot of this CSS is no longer necessary now that all the UI elements live inside iframes. z-index related stuff is unnecessary for example.
+*/
+/*
+these variables lifted from messaging-and-annotation repo
+TODO: make the values common between the projects?
+*/
+/*
+these are variables specific to the annotation demo
+*/
+/* full UI = 2mil3, doc viewer = 2mil */
+/* the annotation toolbar and buttons */
+#rcrsv-annotation-toolbar {
+  line-height: 1;
+  /*    position:fixed;
+    height:32px;
+    bottom:15px;
+    right:15px;*/
+  background: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /*margin-top:6px;*/
+  padding: 2px 3px 0 0;
+  min-width: 275px;
+  z-index: 2000003;
+}
+#rcrsv-annotation-toolbar i,
+#annotation-toolbar-int i {
+  /* from notifications */
+  height: 28px;
+  width: 32px;
+  padding: 2px 4px;
+  margin-left: 2px;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #0e1c2c;
+  background-color: #dfdfdf;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#rcrsv-annotation-toolbar i:hover,
+#annotation-toolbar-int i:hover {
+  background-color: #cdcdcd;
+}
+#rcrsv-annotation-toolbar i.selected,
+#annotation-toolbar-int i.selected {
+  color: #dfdfdf;
+  background-color: #0e1c2c;
+}
+/* canvas containing the annotations */
+#rcrsv-annotation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2000001;
+}
+/* annotation utility button */
+.annotation-button {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+}
+/* the pin button for the individual annotations takes this class when the element is pinned
+TODO: would be nice if it was rotated when pinned status was activated or maybe deactivated */
+.annotation-button-container i {
+  display: inline-block;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+}
+.annotation-button-container i.pinned {
+  display: inline-block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+.annotation-button:hover {
+  background: #BBBBBB;
+  transition: background-color 0.2s, color 0.2s;
+}
+/* contains the annotation rollover menu */
+.annotation-button-container {
+  background: #CCCCCC;
+  position: absolute;
+  border-radius: 3px;
+  z-index: 2000001;
+}
+#rcrsv-color-picker {
+  /*position:fixed;
+    bottom: 48px;
+    right: 90px;*/
+  background: white;
+  border: 3px solid #dfdfdf;
+  border-radius: 5px;
+  /*display: none;*/
+  z-index: 2000001;
+}
+/* each span is a select-able color */
+#rcrsv-color-picker div {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+#rcrsv-color-picker div:hover {
+  border-color: #0e1c2c;
+}
+/* text editor; allows user to change font size or end text editing */
+#rcrsv-text-editor-ui {
+  background-color: #CCCCCC;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 2000001;
+}
+/* user enters text here */
+#text-bubble-text-input {
+  position: absolute;
+  padding: 1em;
+  box-sizing: border-box;
+}
+#text-bubble-text-input,
+.text-bubble-text {
+  font-family: sans-serif;
+}
+/* text inside of a text bubble annotation */
+.text-bubble-text {
+  background: transparent;
+  position: absolute;
+  padding: 1em;
+  box-sizing: border-box;
+  z-index: 2000002;
+  line-height: 1;
+}
+#bubble-size-warning-text {
+  position: absolute;
+  font-size: 12px;
+  text-align: left;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  cursor: default;
+  z-index: 2000002;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line width selector */
+#rcrsv-line-width-selector {
+  /*position:fixed;
+    bottom: 48px;
+    right: 52px;*/
+  background: white;
+  border: 3px solid #dfdfdf;
+  border-radius: 5px;
+  z-index: 2000001;
+}
+.line-width-selector-item {
+  width: 27px;
+  height: 27px;
+  background: white;
+  padding-top: 4px;
+}
+.line-width-selector-item:hover {
+  cursor: pointer;
+  background-color: #0e1c2c;
+  color: white;
+}
+.line-width-selector-item:hover .example-line {
+  background: white;
+}
+/* in the line selector dialog, shows the widths of the line options */
+.example-line {
+  margin: auto;
+  border-radius: 100%;
+  color: black;
+  background: black;
+}
+.rcrsv-ui-iframe {
+  z-index: 2000003;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  display: block;
+}
+body iframe.rcrsv-ui-iframe {
+  display: block;
+}

@@ -1,0 +1,17 @@
+.oSegmentedControl li {
+  padding-left: 4px;
+}
+.oSegmentedControl.oSimple li {
+  border-left: 1px solid #e0e0e0;
+  padding: 0 4px;
+}
+.oSegmentedControl.oSimple li:first-child {
+  border-left: 0;
+}
+.oSegmentedControl.oSimple li .isActive {
+  font-weight: 400 !important;
+  font-family: 'Gotham Bold';
+  color: #494949;
+  cursor: auto;
+  text-decoration: none;
+}

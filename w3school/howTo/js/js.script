@@ -1,0 +1,3689 @@
+// file 1
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+	output.innerHTML = this.value;
+}
+// file 2
+function myFunction() {
+	// Declare variables
+var input, filter, ul, li, a;
+input = document.getElementById("mySearch");
+filter = input.value.toUpperCase();
+ul = document.getElementById("myMenu");
+li = document.getElementsByTagName("li");
+
+// Loop through all list items, and hide those who dont match the search query
+for (i = 0; i < li.length; i++) {
+	a = li[i].getElementsByTagName("a")[0];
+		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
+}
+// file 3
+var x, i, j, selmnt, a, b, c, l;
+// look for any elements width the class "custom-select"
+
+x = document.getElementsByClassName("custom-select");
+for (i = 0; i < x.length; i++) {
+	selElmnt =  x[i].getElementsByTagName("select")[0];
+	// for earch element, create a new DIV that act as the selected item:
+	a = document.createElement("DIV");
+	a.setAttribute("class", "select: selected");
+	a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	x[i].appendChild(a);
+	// for each element, create a new div that will contain the option list
+	b = document.createElement("DIV");
+	b.setAttribute("class", "select-items select-hide");
+	for (l = 1; l < selElmnt.length; l++) {
+		// For earh option in th original seelct element
+		// create a new DIV that will act as an option item
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[l].innerHTML;
+		c.addEventListener("click", function(e) {
+			// When an item is clicked, update the original select box, and the selected item
+			var y, j, k, s, h;
+			s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+			h = this.parentNode.previousSibling;
+			for (j = 0; j < s.length; j++) {
+				if (s.options[j].innerHTML == this,innerHTML) {
+					s.selectedIndex = i;
+					h.innerHTML = this.innerHTML;
+					y = this.parentNode.getElementsByClassName("same-as-selected");
+					for (k = 0; k < y.length; k++) {
+						y[k].removeAttribute("class");
+					}
+					this.setAttribute("class", "same-as-selected");
+					break;
+				}
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	}
+	x[i].appendChild(b);
+	a.addEventListener("click", function(e) {
+		// When the select box is clicked, close and other select boxes, and open/close the current select box
+		e.stopPropagation();
+		closeAllSelect(this);
+		this.nextSibling.classList.toggle("select-hide");
+		this.classList.toggle("select-arrow-active");
+	});
+}
+
+
+// tab content
+function openCity(cityName, elmnt, color) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].style.bacgroundColor = "";
+	}
+	
+	document.getElementById(cityName).style.display = "block";
+	elmnt.style.bacgroundColor = color;
+}
+// get the element width id = "defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+// file 4
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+	// Get today's date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000*60*60*24));
+	var hours = Math.floor((distance % (1000*60*60*24)) / (1000 * 60*60));
+	var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+	var seconds = Math.floor((distance% (1000 * 60)) / 1000);
+
+	// Output the result in an element with id= " demo"
+	document.getElementById("demo").innerHTML = days + "d " + hours +"h " + minutes + "m " + seconds + "s ";
+
+	// If the count down is over, write some text
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	}
+}, 1000);
+
+// myFunction
+function myFunction() {
+	// Declare variables
+	var input, filter, ul, li, a, i, txtValue;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("myUL");
+	li = ul.getElementsByTagName('li');
+
+	// Loop through all list items, and hide those who dont match the search query
+	for (i = 0; i < li.length; i++) {
+		a = li[i].getElementsByTagName("a")[0];
+		txtValue = a.textcontent || a.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
+}
+
+// second function
+function myFunction1() {
+	// Declare variables
+	var input, filter, table, tr, td, i, txtValue;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
+	// loop through all table row, and hide those who dont match the search query
+	for (var i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[0];
+		if (td) {
+			textValue = td.textContent || td.innerText;
+			if (textValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+		}
+	}
+}
+// file 5
+filterSelection("all");
+function filterSelection(c) {
+	var x, i;
+	x = document.getElementsByClassName('filterDiv');
+	if (c == "all") {
+		c= "";
+	}
+	for (i = 0; i < x.length; i++) {
+		w3RemoveClass(x[i], "show");
+		if (x[i].className.indexOf(c) > -1) {
+			w3AddClass(x[i], "show");
+		}
+	}
+}
+
+function w3AddClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i]) == -1) {
+			element.className += " " + arr2[i];
+		}
+	}
+}
+
+function w3RemoveClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		while (arr1.indexOf(arr2[i]) > -1) {
+			arr1.splice(arr1.indexOf(arr2[i]), 1);
+		}
+	}
+	element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+	btns[i].addEventListener("click", function(){
+		var current = document.getElementsByClassName("active");
+		current[0].className = current[0].className.replace(" active", "");
+		this.className += " active";
+	});
+}
+
+// sort
+function sortList() {
+	var list, i , switching, b, shouldSwitch;
+	list = document.getElementById("id01");
+	switching = true;
+	// Make a loop that will continue until no switching has been done
+	while(switching) {
+		// start by saying: no switching is done
+		switching = false;
+		b = list.getElementsByTagName("li");
+		// loop through all list-items
+		for (i = 0; i < (b.length - 1); i++) {
+			// start by saying there should be no switching
+			shouldSwitch = false;
+			// check if the next item should switch place with the current item
+			if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+				// if the next item is alphabetically lower than current item, mark as a switch and break the loop
+				shouldSwitch = true;
+				break;
+			}
+		}
+		if (shouldSwitch) {
+			// If a switch has been marked, make the switch a mark the switch as done
+			b[i].parentNode.insertBefore(b[i + 1], b[i]);
+			switching = true;
+		}
+	}
+}
+
+// Scroll file
+// get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+	scrollFunction()
+};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+// file 6
+// first the html include
+function includeHTML() {
+	var x, i, elmnt, file, xhttp;
+	// Loop through a collection of all HTML elements
+	z= document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		// search for elements with a certain attribute
+		file = elmnt.getAttribute("w3-include-html");
+		if (file) {
+			// make an HTTP request using the attribute value as the file name
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if (this.satatus == 200) {elmnt.innerHTML = this.responsetext;}
+					if (this.satatus == 404) {elmnt.innerHTML = "Page not found"}
+						// remove the attribute, amd call this function once more
+					elmnt.removeAttribute("w3-include-html");
+					includeHTML();
+				}
+			}
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			// exit the function
+			return;
+		}
+	}
+};
+// file 7
+window.onscroll = function() {
+	myFunction();
+};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky");
+	} else {
+		navbar.classList.remove("sticky");
+	}
+}
+
+// part 2
+filterSelection("all");
+function filterSelection(c){
+	var x, i;
+	x = document.getElementsByClassName("column");
+	if (c == "all") {c = "";}
+	for (i = 0; i < x.length; i++) {
+		w3RemoveClass(x[i], "show");
+		if (x[i].className.indexOf(c) > -1) {
+			w3AddClass(x[i], "show");
+		}
+	}
+}
+
+function w3AddClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		if (arr1.indexOf(arr2[i] == -1)) {
+			element.className += " " + arr2[i];
+		}
+	}
+}
+function w3RemoveClass(element, name) {
+	var i, arr1, arr2;
+	arr1 = element.className.split(" ");
+	arr2 = name.split(" ");
+	for (i = 0; i < arr2.length; i++) {
+		while(arr1.indexOf(arr2[i]) > -1) {
+			arr1.splice(arr1.indexOf(arr2[i]), 1);
+		}	
+	}
+	element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// Part 3
+// // When the user scrolls down 20px from the top of the document, side down the navbar
+window.onscroll = function() {
+	scrollFunction()
+};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navbar").style.top = "0";
+	} else {
+		document.getElementById("navbar").style.top = "-50px";
+	}
+}
+// file 8
+function on() {
+	document.getElementById('overlay').style.display = "block";
+}
+
+function off() {
+	document.getElementById("overlay").style.display = "none";
+}
+// part2
+var close = document.getElementsByClassName("closebtn");
+var i;
+for (i = 0; i < close.length; i++) {
+	close[i].onclick = function() {
+		var div = this.parentElement;
+		div.style.opacity = "0";
+		setTimeout( function(){ div.style.display = "none";}, 600);
+	}
+}
+
+// part 2
+var currentTab = 0; // current tabs is set to be the first tba(0)
+showTab(currentTab); // display the current tab
+
+function showTab(n) {
+	// this function will display the specifield tav of the form ...
+	var x = document.getElementsByClassName("tab");
+	x[n].style.display = "block";
+	// ... and fix the previous/ next button
+	if (n ==0 ) {
+		document.getElementById("prevBtn").style.display = "none";
+	} else {
+		document.getElementById("prevBtn").style.display = "inline";
+	}
+
+	if (n == (x.length - 1)) {
+		document.getElementById("nextBtn").innerHTML = "Submit";
+	} else {
+		document.getElementById("nextBtn").innerHTML = "Next";
+	}
+	// ... and run a function that will display the correct step indicator
+	fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+	// thí function will figure out ehich tab to display
+	var x= document.getElementsByClassName("tab");
+	// exit the function if any field in the cirrent tan is ivalid
+	if (n == 1 && !validateForm()) { return false;}
+	// Hide the current tab
+	x[currentTab].style.display = "none";
+	// Increase or decrease the current tab by 1
+	currentTab = currentTab + n;
+	// if you have reached the end if the form
+	if (currentTab >= x.length) {
+		// The form gets submitted
+		document.getElementById("regForm").Submit();
+		return false;
+	}
+	// Otherwise display the correct tab
+	showTab(currentTab);
+}
+
+function validateForm() {
+	// This function deals with validation of the form field
+	var x,y,i, valid = true;
+	x = document.getElementsByClassName("tab");
+	y = x[currentTab].getElementsByTagName("input");
+	// A loop that checks every input field in the current tab
+	for (i = 0; i < y.length; i++) {
+		// If a field is empty
+		if (y[i].value == "") {
+			// Add an "valid" class to the field:
+			y[i].className += "invalid";
+			// and set the current valid status to false
+			valid = false;
+		}
+	}
+	// If the valid status is true, mark the step as finished and valid
+	if (valid) {
+		document.getElementsByClassName("step")[currentTab].className += "finish";
+	}
+	return valid; // return the valid satatus
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+
+function fixStepIndicator(n) {
+	// This function removes the "active" class of all steps ...
+	var i, x = document.getElementsByClassName("step");
+	for (i = 0; i < x.length; i++) {
+		x[i].className = x[i].className.replace(" active", "");
+	}
+	// ... and adds the " active" class on the current step
+	x[n].className += " active";
+}
+
+// part 3
+function openSearch() {
+	document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+	document.getElementById("myOverlay").style.display = "none";
+}
+// file 9
+
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+
+/*
+function autocomplete(inp, arr) {
+	// The autocomplete funtion two arguments, the text field element and an array of possible autocomplete values
+	var currentFocus;
+	// execcute a function when someone writes in the text field
+	inp.addEventListener("input", function(e) {
+		var a, b, i, val = this.value;
+		// Close any allready open lists of autocomplete values
+		closeAllLists();
+		if (!val) { return false;}
+		currentFocus = -1;
+		// create a div element that will contain the items (values)
+		a = document.createElement("DIV");		
+		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("class", "autocomplete-items");
+		// append this div element as a child of the complete container
+		this.parentNode.appendChild(a);
+		// for each item in the array
+		for (i = 0; i < arr.length; i++) {
+			// check if the item starts with the same lletters as the text field value
+			if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+				// create a div element for earch matching element
+				b = document.createElement("DIV");
+				// make the mmmatching letters bold
+				b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+				b.innerHTML += arr[i].substr(val.length);
+				// insert a input field that will hold the current array item value
+				b.innerHTML += "<input type ='hidden' value='" + arr[i] + "'>";
+				// execute a function when someone clicks on the current array items value (DIV element)
+				b.addEventListener("click", function(e) {
+					// insert the value for autocomplete text field
+					inp.value = this.getElementsTagName("input")[0].value;
+					// close the list of autocompllete values, or any other open lists pf autocomplete values:
+					closeAllLists();
+				});
+				a.appendChild(b);
+			}
+		}
+	});
+	// execute a function presses a key on the keyboard
+	inp.addEventListener("keydown", function(e) {
+		var x = document.getElementById(this.id + "autocomplete-list");
+		if (x) x = x.getElementsTagName("div");
+		if (e.keyCode == 440) {
+			// If the arrow Down key is pressed, increase the currentFocus variable
+			currentFocus ++;
+			addActive(x);
+		} else if (e.keyCode == 38) {
+			// Up If the arrow Up key is pressed, increase the currentFocus variables
+			currentFocus --;
+			// and make the current item more visile
+			addActive(x);
+		} else if (e.keyCode == 13) {
+			// If the enter key is pressed, prevent the form from being submitted
+			e.preventDefault();
+			if (currentFocus > -1) {
+				// and simulate a click on the "active" item
+				if (x) x[currentFocus].click();
+			}
+		}
+	});
+
+	function addaActive(x) {
+		// a function to classify an item as "active"
+		if (!x) return false;
+		// start by removing the "active" class on all items
+		removeActive(x);
+		if (currentFocus >= x.length) currentFocus = 0;
+		if (currentFocus < 0) currentFocus = (x.length -1);
+		// add class "autocomplete-active"
+		x[currentFocus].classList.add("autoComplete-active");
+	}
+	function removeClass(x) {
+		// a funtion to remove the "active" class from all complete items
+		for (var i = 0; i < x.length; i++) {
+			x[i].classList.remove("autocomplete-active");
+		}
+	}
+	function closeAllLists(elmnt) {
+		// close all autocomplete lists in the document, except the one passed as an argument
+		var x = document.getElementsClassName("autocomplete-items");
+		for (var i = 0; i < x.length; i++) {
+			if (elmnt != x[i] && elmn!=imp) {
+				x[i].parentNode.removeChild(x[i]);
+			}
+		}
+	}
+	// execute a function when someone clicks in the document
+	document.addEventListener("click", function(e) {
+		closeAllLists(e.target);
+	})
+	// An array containing all the country names in the world:
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria"
+,"Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina"
+,"Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands"
+,"Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus"
+,"Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia"
+,"Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar"
+,"Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India"
+,"Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait"
+,"Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi"
+,"Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat"
+,"Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria"
+,"North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico"
+,"Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia"
+,"Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka"
+,"St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este"
+,"Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom"
+,"United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+// initiate the complete function on the "myInput" element, and pass along the countries array as possible autocomplete values
+autocomplete(document.getElementById("myInput"), countries);
+}
+*/
+// file 10
+// when the user scrols the page, execute myFunction
+window.onscroll = function() { myFunction()};
+
+function myFunction() {
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById("myBar").style.width = scrolled + "%";
+} 
+// file 11
+function imageZoom(imgID, resultID) {
+	var img, lens, result, cx, cy;
+	img = document.getElementById(imgID);
+	result = document.getElementById(resultID);
+	// create lens
+	lens = document.createElement("DIV");
+	lens.setAttribute("class", "img-zoom-lens");
+	// insert lens
+	img.parentElement.insertBefore(lens, img);
+	// Calculate the radio between result DIV and lens
+	cx = result.offsetWidth / lens.offsetWidth;
+	cy = result.offsetHeight / lens.offsetHeight;
+	// set background propertíes for the result div
+	result.style.backgroundImage = "url('" + img.src + "')";
+	result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+	// execute a function when someone moves the cursor over the image, or the lens
+	lens.addEventListener("mousemove", moveLens);
+	lens.addEventListener("mousemove", moveLens);
+	// and also for touch screen
+	lens.addEventListener("touchmove", moveLens);
+	img.addEventListener("touchmove", moveLens);
+
+	function moveLens(e) {
+		var pos, x, y;
+		// parent any other actions that may occur when moving over the image
+		e.preventDefault();
+		// get the cursor's x and y positions
+		pos = getCursorPos(e);
+		// Calculate the position of the lens
+		x = pos.x - (lens.offsetWidth / 2);
+		y = pos.y - (lens.offsetHeight / 2);
+
+		// parent the lens from positioned outside the image
+		if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth;}
+		if (x < 0) { x = 0;}
+		if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight;}
+		if (y < 0) { y = 0;}
+		// set the position of the lens
+		lens.style.left = x + "px";
+		lens.style.top = y + "px";
+		// display what the lens "sees"
+		result.style.backgroundPosition = "-" + ( x * cx) + "px  -" + (y * cy) + "px"; 
+	}
+
+	function getCursorPos(e) {
+		var a, x=0, y=0;
+		e = e || window.event;
+		// get the position of the lens
+		a = img.getBoundingClientRect();
+		// Calculate the cursor'x and y coordinates, relative to the image
+		x = e.pageX - a.left;
+		y = e.pageY - a.top;
+		// consiser any page scrolling
+		x = x -window.pageXOffset;
+		y = y -window.pageYOffset;
+		return {x : x, y : y};
+	}
+}
+imageZoom("imgID", "resultID");
+
+function magnify(imgID, zoom) {
+	var img, glass, w, h, bw;
+	img = document.getElementById(imgID);
+	// create magnify glass
+	glass = document.createElement("DIV");
+	glass.setAttribute("class", "img-magnifier-glass");
+	// insert magnify glass
+	glass.style.backgroundImage = "url('" + img.src + "')";
+	glass.style.backgroundRepeat = "no-reapeat";
+	glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) +"px";
+	bw = 3;
+	w = glass.offsetWidth / 2;
+	h = glass.offsetHeight / 2;
+	// execute a function when someone moves the magnify glass over the image
+	glass.addEventListener("mousemove", moveMagnifier);
+	img.addEventListener("mousemove", moveMagnifier);
+	// and also for touch screen
+	glass.addEventListener("touchmove", moveMagnifier);
+	img.addEventListener("touchmove", moveMagnifier);
+
+	function moveMagnifier(e) {
+		var pos, x, y;
+		// prevent and any other actions that may occus when moving over the image
+		e.preventDefault();
+		x = pos.x;
+		y = pos.y;
+		// prevent the magnify glass from being positioned over the image
+		if ( x > img.width - (w /zoom)) { x = img.width - (w / zoom);}
+		if ( x < w /zoom) { x = w / zoom; }
+		if ( y > img.height - (h /zoom)) { y = img.height - (h / zoom);}
+		if (y < h/zoom) { y = h/zoom; }
+		// set the position of the manifier glass
+		glass.style.left = (x - w) + "px";
+		glass.style.top = (y - h) + "px";
+		// display what the magnify glass "sees"
+		glass.style.backgroundPosition = "-" + ((x*zoom) - w+bw) + "px -" + ((y * zoom) - h + bw) + "px";
+	}
+
+	function getCursorPos(e) {
+		var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+	}
+}
+
+magnify("myimage", 3);
+// file 12
+function chargebattery() {
+	var a;
+	a = document.getElementById("div1");
+	a.innerHTML = "&#xf244;";
+
+	setTimeout(function() {
+		a.innerHTML = "&#xf243;";
+	}, 1000);
+
+	setTimeout(function() {
+		a.innerHTML = "&#xf242;";
+	}, 2000);
+
+	setTimeout(function() {
+		a.innerHTML = "&#xf241;";
+	}, 3000);
+
+	setTimeout(function() {
+		a.innerHTML = "&#xf240;";
+	}, 4000);
+}
+chargebattery();
+setInterval(chargebattery, 5000);
+
+var i = 0;
+var txt = 'Lorem ipsum dummy text blala.';
+var speed = 50;
+
+function typewriter() {
+	if (i < txt.length) {
+		document.getElementById("demo").innerHTML += txt.charAt(i);
+		i++;
+		setTimeout(typewriter, speed);
+	}
+}
+
+window.onscroll = function() { myFunction()};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+	if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+	} else {
+		header.classList.remove("sticky");
+	}
+}
+
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// when the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+	document.getElementById("message").style.display = "block";
+}
+
+// when the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+	document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type somethings inside the password field
+myInput.onkeyup = function() {
+	// validate lowercase letter
+	var lowerCaseLetters = /[a-z]/g;
+	if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+// Set the date wa're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+// Update the dount down every 1 second 
+var countdownfunction = setInterval(function () {
+	// get todays date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now an the count down date
+	var distance = countDownDate -  now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var day = Math.floor(distance/ (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 *60));
+	var seconds = Math.floor((distance % (1000 * 60 * 60 * 24)) / 1000);
+	// common.scriptOutput the result in an element with id = "demo"
+	document.getElementById("demo").innerHTML = day + "d " + hours + "h " + minutes +"m " + seconds+"s ";
+
+	// if  te count down is over, write some text
+	if (distance < 0) {
+		clearInterval(countdownfunction);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	}
+}, 1000);
+
+// make the div element draggle
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	if (document.getElementById(elmnt.id + "header")) {
+		// if present, the header is where you move the div from
+		document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+	} else {
+		// otherwise, move the div from anywhere inside the div
+		elmnt.onmousedown = dragMouseDown;
+	}
+
+	function dragMouseDown(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// get the mouse cursor position at startup
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		document.onmousesetup = closeDragElement;
+		// calll a function whenver the cursor moves
+		document.onmousemove = elementDrag;
+	}
+
+	function elementDrag(e) {
+		e = e || window.event;
+		e.preventDefault();
+		// calculation the element's new position
+		pos1 = pos3 - e.clientX;
+		pos2 = pos4 - e.clientY;
+		pos3 = e.clientX;
+		pos4 = e.clientY;
+		// set the elemnt's new position 
+		elmnt.style.top = (elmnt.offsetTop - pos2) +"px";
+		elmnt.style.left = (elmnt.offsetLeft - pos1) +"px";
+	}
+
+	function closeDragElement() {
+		// Stop moving when moouse button is released
+		document.onmouseup = null;
+		document.onmousemove = null;
+	}
+}
+
+var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+	closebtns[i].addEventListener("click", function() {
+		this.parentElement.style.display = "none";
+	});
+}
+// file 13
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction1() {
+	if (video.paused) {
+		video.play();
+		btn.innerHTML = "Pause";
+	} else {
+		video.pause();
+		btn.innerHTML = "Play";
+	}
+}
+
+// function myFunction() {
+// 	var x = document.getElementById("myTopnav");
+// 	console.log(x.className);
+// 	if (x.className == "topnav") {
+// 		x.className += "reponsive";
+// 	} else {
+// 		x.className += "topnav";
+// 	}
+// }
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+var prevScrollops = window.pageYOffset;
+window.onscroll = function() {
+	var currentScrollPos = window.pageYOffset;
+	if (prevScrollops >  currentScrollPos) {
+		document.getElementById("navbar").style.top = "0";
+	} else {
+		document.getElementById("navbar").style.top = "-50px";
+	}
+	prevScrollops = currentScrollPos;
+}
+
+// when the user scrolllls down 80px from top of the document, rezise the navbar's paddding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+		document.getElementById("navbar").style.padding ="30px 10px";
+		document.getElementById("logo").style.fontSize = "25px";
+	} else {
+		document.getElementById("navbar").style.padding = "80px 10px";
+		document.getElementById("logo").style.fontSize = "35px";
+	}
+}
+// file 14
+// window.onload = function() {
+// 	var app = new Vue({
+// 		el : '#message',
+// 		data : {
+// 			message : "Hoc VueJS tai Freetuts.net"
+// 		}
+// 	});
+// };
+
+// window.onload = function() {
+// 	var app = new Vue({
+// 		el : '#message',
+// 		data : {
+// 			name : 'Tat ca cac ban',
+// 			domain : 'Freetuts.net'
+// 		}
+// 	});
+// };
+
+// class A {
+
+// }
+// var a = new A(); // Mot instance
+// var b = new A(); // Mot instance khac
+
+// var app = new Vue({
+// 	// cac options
+// });
+
+// var app  = new Vue({
+// 	el : '#message',
+// 	data : {
+// 		name : "tat ca cac ban",
+// 		domain : "Freetuts.net"
+// 	}
+// });
+
+// console.log(app);
+
+// window.load = function() {
+// 	var mv1 = new Vue({
+// 		el : '#message1',
+// 		data : {
+// 			message : "Chao mung ban den voi series hoc VueJS"
+// 		}
+// 	});
+
+// 	var mv2 = new vue({
+// 		el : '#message2',
+// 		data : {
+// 			message : "Duoc trinh bay tai freetuts.net"
+// 		}
+// 	});
+// };
+
+// var vm = new Vue({
+// 	data : {
+// 		domain : "freetuts.net"
+// 	}
+// });
+
+// console.log(vm.domain); // ket qua: freetuts.net
+// vm.domain = 'cdn.freetuts.net';
+// console.log(vm.domain); // Ket qua: cnd.freetuts.net
+
+// var vm = new Vue({
+// 	data : {
+// 		domain : "freetuts.net",
+// 		showMessage : function() {
+// 			console.log(this.domain);
+// 		}
+// 	}
+// });
+
+// vm.showMessage(); // ket qua: freetuts.net
+
+// var vm = new Vue({
+// 	data : {
+// 		domain : "freetuts.net"
+// 	},
+// 	created : function() {
+// 		console.log("Instance khoi tao xong. Thuoc tinh domain la: " + this.domain);
+// 		// Ket qua: Instance khoi tao xong. Thuoc tinh domain la freetuts.net
+// 	}
+// })
+
+// var messageApp = new Vue({
+// 	el : "#messageApp",
+// 	data : {
+// 		domain : "freetuts.net",
+// 		author : "Nguyen van cuong"
+// 	}
+// });
+
+// var messageApp = new Vue({
+// 	el  : "#messageApp",
+// 	data : {
+// 		isShowButton : false,
+// 		isVisible : true,
+// 		seen : true,
+// 		href : "https://freetuts.net",
+// 		message : "0979306603"
+// 	},
+// 	filters : {
+// 		numberToWord : function(val) {
+// 			var result = '';
+// 			for (var i = 0; i < val.length; i++) {
+// 				if (val[i] === '0') {
+// 					result += '-khong-';
+// 				}
+// 				if (val[i] === '1') {
+// 					result += '-mot-';
+// 				}
+// 				if (val[i] === '2') {
+// 					result += '-hai-';
+// 				}
+// 				if (val[i] === '3') {
+// 					result += '-ba-';
+// 				}
+// 				if (val[i] === '4') {
+// 					result += '-bon-';
+// 				}
+// 				if (val[i] === '5') {
+// 					result += '-nam-';
+// 				}
+// 				if (val[i] === '6') {
+// 					result += '-sau-';
+// 				}
+// 				if (val[i] === '7') {
+// 					result += '-bay-';
+// 				}
+// 				if (val[i] === '8') {
+// 					result += '-tam-';
+// 				}
+// 				if (val[i] === '9') {
+// 					result += '-chin-';
+// 				}
+// 			}
+// 			return result;
+// 		}
+// 	}
+// })
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : 'Chao mung den voi freetuts.net',
+// 		author : "thehalfheart@gmail.com",
+// 		showMessage : function() {
+// 			return "[" + this.message + "]";
+// 		}
+// 	}
+// });
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Chao mung ban den voi freetuts.net"
+// 	},
+// 	methods : {
+// 		showMessage : function() {
+// 			return "[" + this.message +"]";
+// 		}
+// 	}
+// });
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Chao mung ban den voi freetuts.net"
+// 	}
+// });
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Chao mung ban den voi freetuts.net"
+// 	},
+// 	computed : {
+// 		reverseMessage : function() {
+// 			return this.message.split('').reverse().join('');
+// 		}
+// 	}
+// })
+// 
+// Ta hoan toan co the thay the computed bang method nhu sau
+
+// var vm = new Vue({
+// 	el : "#example",
+// 	data : {
+// 		message : "Chao mung ban den voi freetuts.net, Trang web hang dau va hoc lap trinh online"
+// 	},
+//   methods : {
+//     reverseMessage : function(){
+//       return this.message.split('').reverse().join('');
+//     }
+//   }
+// });
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		number : "12345"
+// 	},
+// 	computed : {
+// 		showNumberWord : function() {
+// 			console.log("Co goi");
+// 			var message = "";
+// 			for (var i = 0; i < this.number.length; i++) {
+// 				if (this.number[i] == "1") {
+// 					message += "Mot";
+// 				}
+// 				if (this.number[i] == "2") {
+// 					message += "Hai";
+// 				}
+// 				if (this.number[i] == "3") {
+// 					message += "Ba";
+// 				}
+// 				if (this.number[i] == "4") {
+// 					message += "Bon";
+// 				}
+// 				if (this.number[i] == "5") {
+// 					message += "Nam";
+// 				}
+// 				if (this.number[i] == "6") {
+// 					message += "Sau";
+// 				}
+// 				if (this.number[i] == "7") {
+// 					message += "Bay";
+// 				}
+// 				if (this.number[i] == "8") {
+// 					message += "Tam";
+// 				}
+// 				if (this.number[i] == "9") {
+// 					message += "Chin";
+// 				}
+// 			}
+// 			return message;
+// 		}
+// 	}
+// });
+
+// Mac dinh moi computed se co hai phuong thuc do la getter va setter, Neu ban khong khai bao thi mac dinh no se hieu la nam dang su dung getter vi vay cuoi moi computed luon co lenh return
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Hoc Vuejs tai freetuts.net"
+// 	},
+// 	computed : {
+// 		uppercaseMessage : function() {
+// 			// Mac dinh la Vue se hiue day la getter nen phai co return
+// 			return "[" + this.message.toUpperCase() + "]";
+// 		}
+// 	}
+// })
+
+// Hoac cung co the su dung cu phap thay doi getter nhu sau
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Hoc Vuejs tai freetus.net"
+// 	},
+// 	computed : {
+// 		uppercaseMessage : {
+// 			// Khai bao getter
+// 			get : function() {
+// 				return "[" + this.message.toUpperCase() + "]";
+// 			},
+
+// 			// Khai bao setter neu ban muon thi lam nhu sau
+// 			set : function(newValue) {
+// 				this.message = newValue.toLowerCase();
+// 			}
+// 		}
+// 	}
+// });
+
+// // Moi khi ta truyen gia tri cho uppercaseMessage thi message se bi thay doi boi noi dung cua ban settr la this.message = newValue.toLowerCase();
+// vm.uppercaseMessage = "NGUYEN VAN CUONG";
+
+// console.log(vm.message); // nguyen van cuong
+
+// Vue watcher la nguoi trong coi khi du lieu cua VueJS thay doi. Watcher se nhan bien duoc khi nao thi du lieu thay doi va neu can thiet thi se can thiep vao qua trinh thay doi do
+
+// var vm = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		message : "Hoc VueJS Watchers tai freetuts.net "
+// 	},
+// 	watch : {
+// 		message : function(newValue) {
+// 			console.log("Gia tri cua message duoc thay doi");
+// 		}
+// 	}
+// });
+
+// // Thay doi gia tri cua message
+// // Neu ban bat console.log nen thi se thay mot dong thong bao la gia tri cua message da thay doi
+
+// vm.message = "Van cuong";
+
+// var vm = new Vue({
+// 	el : '#demo',
+// 	data : {
+// 		firstName : "Foo",
+// 		lastName : "Bar",
+// 		fullName : "Foo Bar"
+// 	},
+// 	watch : {
+// 		firstName: function(val) {
+// 			this.fullName = val + " " +  this.lastName;
+// 		}
+// 		lastName: function(val) {
+// 			this.fullName = this.firstName + " " + val;
+// 		}
+// 	}
+// });
+
+// var vm1 = new Vue({
+// 	el : '#example',
+// 	data : {
+// 		firstName : "Foo",
+// 		lastName : "Bar"
+// 	},
+// 	computed : {
+// 		fullName : function() {
+// 			return this.firstName + " " + this.lastName;
+// 		}
+// 	}
+// });
+
+// var vm = new Vue({
+// 	el : "#example",
+// 	data : {
+// 		isActive : true,
+// 		message : "This is a message",
+// 		showClass : {
+// 			"active" : true
+// 		},
+// 		activeClass: "active",
+// 		errorClass : "error",
+// 		activeColor : 'blue',
+// 		fontSize : 35,
+// 		addActive : {
+// 			"background" : "red",
+// 			"font-size" : "20px"
+// 		},
+// 		addError : {
+// 			"color" : "black"
+// 		}
+// 	}
+// });
+
+var vm = new Vue({
+	el : "#example",
+	data : {
+		type = 'B'
+		,loginType = 'username'
+	}
+});
+// file 15
+// $("div").click(function() {
+// 	$(this).addClass("big-blue", 1000, "easeOutBounce");
+// });
+
+// $(document).click( function() {
+// 	$("#toggle").toggle("blind");
+// })
+
+// $( document ).click(function() {
+// 	$("#toggle").toggle("bounce", { times: 3 }, "slow");
+// });
+
+// $( document ).click(function() {
+//   $( "#toggle" ).toggle( "bounce", { times: 3 }, "slow" );
+// // });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("clip");
+// });
+
+// $( document ).click(function() {
+//   $( "#toggle" ).toggle( "clip" );
+// });
+
+// $("#toggle").click(function() {
+// 	$("#elem").animate({
+// 		color : "green",
+// 		backgroundColor :"rgb( 20, 20, 20)"
+// 	});
+// });
+
+// var clippings = [
+// 	{
+// 		top: 10,
+// 		right : 50,
+// 		bottom : 50,
+// 		left: 5
+// 	},
+// 	{
+// 		top : 5,
+// 		right : 150,
+// 		bottom : 150,
+// 		left :0 
+// 	}
+// ];
+
+// var index = 1;
+// var box = $(".clipped").cssClip(clippings[0]);
+
+// $(document).click(function() {
+// 	box.animate({
+// 		clip : clippings[index++ % 2]
+// 	}, 2000);
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("drop");
+// });
+
+// $(document).click(function() {
+// 	$("div").effect("bounce", "slow");
+// })
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("explode");
+// });
+
+// $(document).click(function() {
+// 	$("#toggle1").toggle("fade");
+// });
+
+// $(document).click(function() {
+// 	$("#toggle2").toggle("fold");
+// });
+
+// $(document).click(function() {
+// 	$("button").click(function() {
+// 		$("div").hide("drop", { direction: "down"}, "slow");
+// 	});
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("highlight");
+// })
+
+// $.effects.define("fade", "toggle",function(options, done) {
+// 	var show = options.mode  === "show";
+// 	$(this)
+// 	.css("opacity", show ? 0: 1)
+// 	.animate({
+// 		opacity : show  ? 1 : 0
+// 	}, {
+// 		queue : false,
+// 		duration: options.duration,
+// 		easing : options.easing,
+// 		complete : done
+// 	});
+// });
+
+// $(document).on("click",function() {
+// 	$(".elem").toggle("fade");
+// });
+
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("puff");
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("pulsate");
+// });
+
+//////////////////////////////////////////////////////////
+// $("div").click(function() {                          //
+// 	$(this).removeClass("big-blue", 1000,"easeInBack"); //
+// })                                                   //
+//////////////////////////////////////////////////////////
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("scale");
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle({effect : "scale", direction: "horizontal"});
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").effect("shake");
+// });
+
+// $("button").click(function() {
+// 	$("div").show("fold", 1000);
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").effect("size", {
+// 		to : { width : 200, height: 60}
+// 	}, 1000);
+// });
+
+// $(document).click(function() {
+// 	$("#toggle").toggle("slide");
+// });
+
+// $("div").click(function() {
+// 	$(this).switchClass("big","blue", 1000, "easeInOutQuad");
+// });
+
+// $("button").click(function() {
+// 	$("div").toggle('fold', 1000);
+// });
+
+// $("div").click(function() {
+// 	$(this).toggleClass("big-blue", 1000, "easeOutSine");
+// });
+
+// $("div").click(function() {
+// 	var i = 1 - $("div").index(this);
+// 	$(this).transfer({
+// 		to : $("div").eq( i ),
+// 		duration : 1000
+// 	});
+// });
+
+// $("div").click(function() {
+// 	$(this).addClass("big-blue", 1000, "easeOutBounce");
+// });
+
+// $("#toggle").click(function() {
+// 	console.log(11);
+// 	$("#elem").animate({
+// 		color : "green",
+// 		backgroundColor : "rgb(20, 20, 20)"
+// 	});
+// });
+
+
+// var clippings = [
+// 	{
+// 		top : 10,
+// 		right : 50,
+// 		bottom : 50,
+// 		left : 5
+// 	}, {
+// 		top : 0,
+// 		right : 150,
+// 		bottom : 150,
+// 		left : 0
+// 	}];
+// var index = 1;
+// var box = $(".clipped").cssClip(clippings[0]);
+
+// $(document).click(function() {
+// 	box.animate({
+// 		clip : clippings[ index++ % 2]
+// 	}, 2000);
+// });
+
+// $(document).click(function() {
+// 	$("div").effect("bounce", "slow");
+// });
+
+// $("button").click(function() {
+// 	$("div").hide("drop", {direction: "down"}, "slow");
+// });
+
+// $("div").click(function() {
+// 	$(this).removeClass("big-blue", 1000, "easeInBack");
+// });
+
+// $("div").click(function() {
+// 	$("div").show("fold", 1000);
+// });
+
+// $("div").click(function() {
+// 	$(this).switchClass("big", "blue", 1000, "easeInOutQuad");
+// });
+
+// $("button").click(function() {
+// 	$("div").toggle("fold", 1000);
+// });
+
+// $("div").click(function() {
+// 	$(this).toggleClass("big-blue", 1000, "easeOutSine");
+// });
+
+// $("div").click(function() {
+// 	var i = 1 - $("div").index(this);
+// 	$(this).transfer({
+// 		to : $("div").eq(i),
+// 			duration : 1000 
+// 		});
+// 	});
+
+// $(".selelctor").draggable({
+// 	addClass : false
+// });
+
+// // Getter
+// var addClass = $(".selector").draggable("option", "addClasses");
+
+// // Setter
+// $(".selector").draggable("option", "addClass", false);
+
+// $(".selector").draggable({
+// 	appendTo : "body"
+// });
+
+// //Getter
+// var appendTo = $(".selector").draggable("option", "appendTo");
+
+// //Setter
+// $(".selecter").draggable("option", "appendTo", "body");
+
+
+// $(".selector").draggable({
+// 	axis : "x"
+// });
+
+// //Getter
+// var asix = $(".selector").draggable("option", "axis");
+
+// // Setter
+// $(".seletor").draggable("option", "axis", "x");
+
+// $(".selector").draggable({
+// 	cancel : ".title"
+// });
+
+// //Getter
+// var cancel = $(".selector").draggable("option", "cancel");
+
+// // Setter
+// $(".selector").draggable("option", "cancel", ".title");
+
+// $(".selector").draggable({
+// 	classes : {
+// 		"ui-draggble" : "highlight"
+// 	}
+// });
+
+// //Getter
+// var themeClass = $(".selector").draggable("opption", "classes.ui-draggble");
+
+// // Setter
+// $(".selector").draggable("opption", "classes.ui-draggable", "highlight");
+
+// $(".selector").draggable({
+// 	connectToSortable : "3myy-sortable"
+// });
+
+// //Getter
+// var connectToSortable = $(".selector").draggable("option","connectToSortable");
+
+// //Setter
+// $(".selellctor").draggable("opption", "connectToSortable", "33my-sortable");
+
+// $(".selector").draggable({
+// 	containment : "parent"
+// });
+
+// // Getter
+// var containment = $("..selector").draggable("opption", "containment");
+
+// //Setter
+// $(".sekector").draggable("option", "ccontainment", "pparent");
+
+// $(".selector").draggable({
+// 	cursor : "crosshhair"
+// });
+
+// //Getter
+// var cursor = $(".selector").draggable("opption", "cursor");
+
+// //Setter
+// $(".selector").draggable("option", "cursor", "crosshair");
+
+// $("selelctor").draggable("opption", "cursorAt", {left : 5});
+
+// $(".selector").draggable({
+// 	delay : 300
+// });
+
+// //Getter
+// var delay = $(".selector").draggable("option", "delay");
+
+// // Setter
+// $(".selector").draggable("option", "delay", 300);
+
+// $(".selector").draggable({
+// 	disable : true
+// });
+
+// //Getter
+// var disable = $(".selector").draggable("option", "disable");
+
+// // Setter
+// $(".selector").draggable("option", "disable", true);
+
+// $(".selector").draggable({
+// 	distance : 10
+// });
+
+// //Getter
+// var distance = $(".selector").draggable("option", "distance");
+
+// //Setter
+// $(".selector").draggable("option","distance", 10);
+
+// $(".selector").draggable({
+// 	grid : [50, 20]
+// });
+
+// // Getter
+// var gird = $(".selector").draggable("option", "gird");
+
+// //Setter
+// $(".selector").draggable("option", "grid", [50, 20]);
+
+// $(".seletor").draggable({
+// 	handle : "h2"
+// });
+
+// // Getter
+// var handle = $(".selector").draggable("option", "handle");
+
+// // Setter
+// $(".selector").draggable("option", "handle", "h2");
+
+// $(".selector").draggable({
+// 	helper : "clone"
+// });
+
+// //Getter
+// var helper = $(".selector").draggable("option", "helper");
+
+// //Setter
+// $(".selector").draggable("option", "helper", "clone");
+
+// $(".selector").draggable({
+// 	iframeFix : true
+// });
+
+// // Getter
+// var iframeFix = $(".selector").draggable("option", "iframeFix");
+
+// //Setter
+// $(".selector").draggle("option", "iframeFix", true);
+
+// $(".selector").draggable({
+// 	opacity : 0.35
+// });
+
+// // Getter
+// var opacity = $(".selector").draggable("option","opacity");
+
+// //Setter
+// $(".selector").draggable("option", "opacity", 0.35);
+
+// $(".selector").draggable({
+// 	refreshPositions : true
+// });
+
+// // Getter
+// var refreshPositions = $(".selector").draggable("option", "refreshPositions");
+
+// //Setter
+// $(".selector").draggable("option", "refreshPositions", true);
+
+// $(".selector").draggable({
+// 	revert : true
+// });
+
+// //Getter
+// var revert = $(".selector").draggable("option", "revert");
+
+// //Setter
+// $(".selector").draggable("option", "revert", true);
+
+// $(".selector").draggable({
+// 	revertDuration : 200
+// });
+
+// //Getter
+// var revertDuration = $(".selector").draggable("option", "revertDuration");
+
+// //Setter
+// $(".selector").draggable("option", "revertDuration", 200);
+
+// $(".selector").draggable({
+// 	scope : "tasks"
+// });
+
+// //Getter
+// var scope = $(".selector").draggable("option", "scope");
+
+// //Setter 
+// $(".selector").draggable("option", "scope", "tasks");
+
+// $(".selector").draggable({
+// 	scroll: false
+// });
+
+// //Getter
+// var scroll = $(".selector").draggable("option", "scroll");
+
+// //Setter
+// $(".selector").draggable("option", "scroll", false);
+
+// $(".selector").draggable({
+// 	scrollSensitivity : 100
+// });
+
+// //Getter
+// var scrollSensitivity = $(".selector").draggable("option", "scrollSensitivity");
+
+// //Setter
+// $(".selector").draggable("option", "scrollSensitivity", 100);
+
+// $(".selector").draggable({
+// 	scrollSpeed : 100
+// });
+
+// //Getter
+// var scrollSpeed = $(".selector").draggable("option", "scrollSpeed");
+
+// //Setter
+// $(".selector").draggable("option", " scrollSpeed", 100);
+
+// $(".selector").draggable({
+// 	snap : true
+// });
+
+// //Getter
+// var snap = $(".selector").draggable("option", "snap");
+
+// //Setter
+// $(".selector").draggable("option", "snap", true);
+
+// $(".selector").draggable({
+// 	snapMode : "inner"
+// });
+
+// //Getter
+// var snapMode = $(".selector").draggable("option", "snapMod");
+
+// //Setter
+// $(".selector").draggable("option", "snapMode", "inner");
+
+// $(".selector").draggable({
+// 	snapTolerance : 30
+// });
+
+// //Getter
+// var snapTolerance = $(".selector").draggable("option", "snapTolerance");
+
+// //Setter
+// $(".selector").draggable("option", "snapTolerance", 30);
+
+// $(".selector").draggable({
+// 	stack : ".products"
+// });
+
+// //Getter
+// var stack = $(".selector").draggable("option", "stack");
+
+// //Setter
+// $(".selector").draggable("option", "stack", ".products");
+
+// $(".selector").draggable({
+// 	zIndex : 100
+// });
+
+// //Getter
+// var xIndex = $(".selector").draggable("option", "zIndex");
+
+// //Setter
+// $(".selector").draggable("option", "xIndex", 100);
+
+// $(".selector").draggable("destroy");
+
+// $(".selector").draggable("disable");
+
+// $(".seletor").draggable("enable");
+
+// $(".selector").draggable("instance");
+
+// var isDisabled = $(".selector").draggable("option", "disable");
+
+// var options = $(".selector").draggable("option");
+
+// $(".selector").draggable("option", "disable", true);
+
+// $("selector").draggable("option", {disabled : true});
+
+// var widget = $(".selector").draggable("widget");
+
+// $(".selector").draggable({
+// 	create : function( event, ui) {}
+// });
+
+// $(".selector").on("dragcreate", function(event, ui) {});
+
+// $(".selector").draggable({
+// 	drag: function( event, ui) {}
+// });
+
+// $(".selector").on("drag", function(event, ui) {});
+
+// $(".selector").draggable({
+// 	drag : function( event, ui) {
+// 		// Keep the left edge of the element
+// 		// at last 100 pixels from the container
+// 		ui.position.left = Math.min( 100, ui.position,left);
+// 	}
+// });
+
+// $(".selector").draggable({
+// 	start : function( event, ui) {}
+// });
+
+// $(".selector").on("dragstart", function( event, ui) {});
+
+// $(".selector").draggable({
+// 	stop : function( event, ui) {}
+// });
+
+// $(".selector").on("dragstop", function( event, ui) {});
+
+// $(".selector").droppable({
+// 	accept : ".special"
+// });
+
+// // Getter
+// var accept = $(".selector").droppable("option", "accept");
+
+// //Setter
+// $(".selector").droppable("option", "accept", ".special");
+
+// $(".selector").droppable({
+// 	activeClass : "ui-state-highlight"
+// });
+
+// //Getter
+// var activeClass = $(".selector").droppable("option", "activeClass");
+
+// //Setter
+// $(".selector").droppable("option", "activeClass", "ui-state-highlight");
+
+// $(".selector").droppable({
+// 	addClass : false
+// });
+
+// //Getter
+// var addClass = $(".selector").droppable("option", "addClasses");
+
+// //Setter
+// $(".selector").droppable("option", "addClasses", false);
+
+// $(".selector").droppable({
+// 	classes : {
+// 		"ui-droppable" : highlight
+// 	}
+// });
+
+// //Getter
+// var themeClass = $(".selector").droppable("option", "classes.ui-droppale");
+
+// //Setter
+// $(".selector").droppable("option", "classes.ui-droppale", "highlight");
+
+// $(".selector").droppable({
+// 	disable : true
+// });
+
+// //Getter
+// var disable = $(".selector").droppable("option", "disabled");
+
+// //Setter
+// $(".selector").droppable("option", "disabled", true);
+
+// $(".selector").droppable({
+// 	greedy : true
+// });
+
+// //Getter
+// var greedy = $(".selector").droppable("option", "greedy");
+
+// //Setter
+// $(".selector").droppable("option", "greedy", true);
+
+// $(".selector").droppable({
+// 	hoverClass : "drop-hover"
+// });
+
+// //Getter
+// var hoverClass = $(".selector").droppable("option", "hoverClass");
+
+// //Setter
+// $(".selector").droppable("option", "hoverClass", "drop-hover");
+
+// $(".selector").droppable({
+// 	scope : "tasks"
+// });
+
+// //Getter
+// var scope = $(".selector").droppable("option", "scope");
+
+// //Setter
+// $(".selector").droppable("option", "scope", "tasks");
+
+// $(".selector").droppable({
+// 	snapTolerance : "fit"
+// });
+
+// //Getter
+// var snapTolerance = $(".selector").droppable("option", "tolerance");
+
+// //Sstter
+// $(".selector").droppable("option", "tolerance", "fit");
+
+// $("selector").droppable("destroy");
+
+// $(".selector").droppable("disable");
+
+// $(".selector").droppable("enable");
+
+// $(".selector").droppable("instance");
+
+// var isDisabled = $(".selector").droppable("option", "disabled");
+
+// var options = $(".selector").droppable("option");
+
+// $(".selector").droppable("option", "disable", true);
+
+// var widget = $(".selector").droppable("widget");
+
+// $(".selector").droppable({
+// 	activate : function( event, ui) {}
+// });
+
+// $(".selector").on("dropactivate", function( event, ui) {});
+
+// $(".selector").droppable({
+// 	create : function( event, ui) {}
+// });
+
+// $(".selector").on("dropcreate", function( event, ui) {});
+
+// $(".selector").droppable({
+// 	deactivate : function( event, ui) {}
+// });
+
+// $(".selector").on("dropdeactivate", function( event, ui) {});
+
+// $(".seletor").droppable({
+// 	drop : function( event, ui) {}
+// });
+// $(".selector").on("drop", function( event, ui) {});
+
+// $(".selector").droppable({
+// 	out : function( event, ui) {}
+// });
+
+// $(".selector").on("dropout", function( event, ui) {});
+
+// $(".selector").droppable({
+// 	over: function( event, ui) {}
+// });
+
+// $(".selector").on("dropover", function( event, ui) {});
+
+// $(".selector").mouse({
+// 	cancel : ".title"
+// });
+
+// //Getter
+// var cancel = $(".selector").mouse("option", "cancel");
+
+// //Setter
+// $(".selector").mouse("option", "cancel", ".title");
+
+// $(".selector").mouse({
+// 	delay : 300
+// });
+
+// //Getter
+// var delay = $(".selector").mouse("option", "delay");
+
+// //Setter
+// $(".selector").mouse("option", "delay", 300);
+
+// $(".selector").mouse({
+// 	distance : 10
+// });
+
+// //Getter
+// var distance = $(".selector").mouse("option", "distance");
+
+// //Setter
+// $(".selector").mouse("option","distance", 10);
+
+// $(".selector").mouse("_mouseCapture");
+
+// $(".selector").mouse("_mouseDelayMet");
+
+// $(".selector").mouse("_mouseDestroy");
+
+// $(".selector").mouse("_mouseDistanceMet");
+
+// $(".seletor").mouse("_mouseDown");
+
+// $(".selecotr").mouse("_mouseDrag");
+
+// $(".selector").mouse("_mouseInit");
+
+// $(".selector").mouse("_mouseMove");
+
+// $(".selector").mouse("_mouseStart");
+
+// $(".selector").mouse("_mouseStop");
+
+// $(".selector").mouse("_mouseUp");
+
+// $(".selector").resizable({
+// 	alsoResize : "#mirror"
+// });
+
+// //Getter
+// var alsoResize = $(".selector").resizable("option", "alsoResize");
+
+// //Setter
+// $(".selector").resizable("option", "alsoResize", "#mirror");
+
+// $(".selector").resizable({
+// 	animate : true
+// });
+
+// //Getter
+// var animate = $(".selector").resizable("option", "animate");
+
+// //Setter
+// $(".selector").resizable("option", "animate", true);
+
+// $(".selector").resizable({
+// 	animateDuration : "fast"
+// });
+
+// //Getter
+// var animateDuration = $(".selector").resizable("option", "animateDuration");
+
+// // Setter
+// $(".selector").resizable("option", "animateduration", "fast");
+
+// $(".selector").resizable({
+// 	animateEasing : "easeOutBounce"
+// });
+
+// //Getter
+// var animateEasing = $(".selector").resizable("option", "animateEasing");
+
+// // Setter
+// $(".selector").resizable("option", "animateEasing", "easeOutBounce");
+
+// $(".selector").resizable({
+// 	aspectRatio : true
+// });
+
+// //Getter
+// var aspectRatio = $(".selector").resizable("option", "aspectRatio");
+
+// //Setter
+// $(".selector").resizable("option", "aspectRatio", true);
+
+// $(".selector").resizable({
+// 	autoHide : true
+// });
+
+// //Getter
+// var autoHide = $(".selector").resizable("option", "autoHide");
+
+// //Setter
+// $(".selector").resizable("option", "autoHide", true);
+
+// $(".selector").resizable({
+// 	cancel : ".cancel"
+// });
+
+// //Getter
+// var cancel = $(".selector").resizable("option", "cancel");
+
+// //Setter
+// $(".selector").resizable("option", "cancel", ".cancel");
+
+// $(".selector").resizable({
+// 	calsses : {
+// 		"ui-resizale" : "highlight"
+// 	}
+// });
+
+// //Getter
+// var themeClass = $(".selector").resizable("option", "classes.ui-resizable");
+
+// //Setter
+// $(".selector").resizable("option", "classes.ui-resizle","highlight");
+
+// $(".selector").resizable({
+// 	containment : "parent"
+// });
+
+// // Getter
+// var containment = $(".selector").resizable("option", "containment");
+
+// //Setter
+// $(".selector").resizable("option", "containment", "parent");
+
+// $(".selector").resizable({
+// 	delay : 150
+// });
+
+// //Getter
+// var delay = $(".selector").resizable("option", "delay");
+
+// //Setter
+// $(".selector").resizable("option", "delay", 150);
+
+// $(".selector").resizable({
+// 	disabled : true
+// });
+
+// //Getter
+// var disabled = $(".selector").resizable("option", "disabled");
+
+// //Setter
+// $(".selector").resizable("option","disabled", true);
+
+// $(".selector").resizable({
+// 	distance : 30
+// });
+
+// //Getter
+// var distance = $(".selector").resizable("option", "distance");
+
+// // Setter
+// $(".selector").resizable("option", "distance", 30);
+
+// $(".selector").resizable({
+// 	ghost : true
+// });
+
+// // Getter
+// var ghost = $(".selector").resizable("option", "ghost");
+
+// // Setter
+// $(".selector").resizable("option", "ghost", true);
+
+// $(".selector").resizable({
+// 	gird : [ 20, 10]
+// });
+
+// //Getter
+// var gird = $(".selector").resizable("option", "gird");
+
+// //Setter
+// $(".selector").resizable("option", "gird", [ 20, 10]);
+
+// $(".selector").resizable({
+// 	handles : "n,e,s,w"
+// });
+
+// //Getter
+// var handles = $(".selector").resizable("option", "handles");
+
+// //Setter
+// $(".selector").resizable("option", "handles", "n,e,s,w");
+
+// $(".selector").resizable({
+// 	helper : "resizable-helper"
+// });
+// //Getter
+// var helper = $(".selector").resizable("option", "helper");
+
+// //Setter
+// $(".selector").resizable("option", "helper", "resizable-helper");
+
+// $(".selector").resizable({
+// 	maxHeight : 300
+// });
+
+// //Getter
+// var maxHeight = $(".selector").resizable("option", "maxHeight");
+
+// //Setter
+// $.("selector").resizable("option", "maxHeight", 300);
+
+// $(".selector").resizable({
+// 	maxWidth : 300
+// });
+
+// //Getter
+// var maxWidth = $(".selector").resizable("option", "maxWidth");
+
+// //Setter
+// $(".selector").resizable("option", "maxWidth", 300);
+
+// $(".selector").resizable({
+// 	minHeight : 150
+// });
+
+// //Getter
+// var minHeight = $(".selector").resizable("option", "minHeight");
+
+// //Setter
+// $(".selector").resizable("option","minHeight", 150);
+
+// $(".selector").resizable({
+// 	minWidth: 150
+// });
+
+// //Getter
+// var minWidth = $(".selector").resizable("option", "minWidth");
+
+// // Setter
+// $(".selector").resizable("option", "minHeight", 150);
+
+// $(".selector").resizable({
+// 	minWidth : 150
+// });
+
+// //Getter
+// var minWidth = $(".selector").resizable("option", "minWidth");
+
+// //Setter
+// $(".selector").resizable("option", "minWidth", 150);
+
+// $(".selector").resizable("destroy");
+// $(".selector").resizable("disable");
+// $(".selector").resizable("enable");
+// $(".selector").resizable("instance");
+
+// var isDisabled = $(".selector").resizable("option", "disabled");
+
+// var options = $(".selector").resizable("option");
+
+// $(".selector").resizable("option", "disabled", true);
+
+// $(".selector").resizable("option", {disabled : true});
+
+// var widget = $(".selector").resizable("widget");
+
+// $(".selector").resizable({
+// 	create : function( event, ui) {}
+// });
+
+// $(".selector").on("resizecreate", function( event, ui) {});
+
+// $(".selector").resizable({
+// 	resize : function( event, ui) {}
+// });
+
+// $(".selector").on("resize", function( event, ui) {});
+
+// $(".selector").resizable({
+// 	resize : function( event, ui) {
+// 		ui.size.height = Math.round( ui.size.height / 30) * 30;
+// 	}
+// });
+
+// $(".selector").on("resizestart", function( evnet, ui) {});
+
+// $(".selector").resizable({
+// 	stop : function( event, ui) {}
+// });
+
+// $(".selector").on("resizestop", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	appendTo : "#someElem"
+// });
+
+// //Getter
+// var appendTo = $(".selector").selectable("option", "appendTo");
+
+// //Setter
+// $(".selector").selectable("option", "appendTo", "#someElem");
+
+// $(".selector").selectable({
+// 	autoRefresh : false
+// });
+
+// //Getter
+// var autoRefresh = $(".selector").selectable("option", "autoRefresh");
+
+// //Setter
+// $(".selector").selectable("option", "autoRefresh", false);
+
+// $(".selector").selectable({
+// 	cancel : "a, .cancel"
+// });
+
+// //Getter
+// var cancel = $(".selector").selectable("option", "cancel");
+
+// //Setter
+// $(".selector").selectable("option", "cancel", "a, .cancel");
+
+// $(".selector").selectable({
+// 	classes : {
+// 		"ui-selectable" " highlight"
+// 	}
+// });
+
+// //Getter
+// var themeClass = $(".selector").selectable("option", "ui-selectable");
+
+// //Setter
+// $(".selector").selectable("option", "classes.ui-selectable", "highlight");
+
+// $(".selector").selectable({
+// 	delay : 150
+// });
+
+// //Getter
+// var delay = $(".selector").selectable("option", "delay");
+
+// //Setter
+// $(".selector").selectable("option", "delay", 150);
+
+// $(".selector").selectable({
+// 	disabled : true
+// });
+
+// //Getter
+// var disabled = $(".selector").selectable("option", "disabled");
+
+// //Setter
+// $(".selector").selectable("option", "disabled", true);
+
+// $(".selector").selectable({
+// 	distance : 30
+// });
+
+// //Getter
+// var distance = $(".selector").selectable("option", "distance");
+
+// //Setter
+// $(".selector").selectable("option", "distance", 30);
+
+// $(".selector").selectable({
+// 	filter : "li"
+// });
+
+// //Getter
+// var filter = $(".selector").selectable("option", "filter");
+
+// //Setter
+// $(".selector").selectable("option", "filter", "li");
+
+// $(".selector").selectable({
+// 	tolerance : "fit"
+// });
+
+// //Getter
+// var tolerance = $(".selector").selectable("option", "tolerance");
+
+// //Setter
+// $(".selector").selectable("option", "tolerance", "fit");
+
+// $(".selector").selectable("destroy");
+
+// $(".selector").selectable("disable");
+
+// $(".selector").selectable("enable");
+
+// $(".selector").selectable("instance");
+
+// $(".selector").selectable("option", "disable");
+
+// $(".selector").selectable("option", "enable");
+
+// $(".selector").selectable("option");
+
+// $(".selector").selectable("option", "disable", true);
+
+// $(".selector").selectable("option", {disable : true });
+
+// $(".selector").selectable("refresh");
+
+// $(".selector").selectable("widget");
+
+// $(".selector").selectable({
+// 	create : function( event, ui) {}
+// });
+// $(".selector").on("selectablecreate", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	selected : function( event, ui) {}
+// });
+// $(".selector").on("selectableselected", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	selecting : function( event, ui) {}
+// });
+// $(".selector").on("selectableselecting", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	start : function( event, ui) {}
+// });
+// $(".selector").on("selectablestart", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	stop : function( event, ui) {}
+// });
+// $(".selector").on("selectablestop", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	unselected : function( event, ui) {}
+// });
+// $(".selector").on("selectableunselected", function( event, ui) {});
+
+// $(".selector").selectable({
+// 	unselecting : function( event, ui) {}
+// });
+// $(".selector").on("selectableunselecting", function( event, ui) {});
+
+// $(".selector").sortable({
+// 	appendTo : document.body
+// });
+
+// //Getter
+// var appendTo = $(".selector").sortable("option", "appendTo");
+
+// //Setter
+// $(".selector").sortable("option", "appendTo", document.body);
+
+// $(".selector").sortable({
+// 	axis : "x"
+// });
+
+// //Getter
+// var axis = $(".selector").sortable("option", "axis");
+
+// //Setter
+// $(".selector").sortable("option", "axis", "x");
+
+// $(".selector").sortable({
+// 	cancel : "a,button"
+// });
+
+// //Getter
+// var cancel = $(".selector").sortable("option", "cancel");
+
+// //Setter
+// $(".selector").sortable("option", "cancel", "a,button");
+
+// $(".selector").sortable({
+// 	classes : {
+// 		"ui-sortable" : "highlight"
+// 	}
+// });
+
+// //Getter
+// var themeClass = $(".selector").sortable("option", "ui-sortable");
+
+// //Setter
+// $(".selector").sortable("option", "ui-sortable", "highlight");
+
+// $(".selector").sortable({
+// 	connectWith : "#shopping-cart"
+// });
+
+// //Getter
+// var connectWith = $(".selector").sortable("option", "connectWith");
+
+// //Setter
+// $(".selector").sortable("option", "connectWith", "#shopping-cart");
+
+// $(".selector").sortable({
+// 	containment : "parent"
+// });
+
+// //Getter
+// var containment = $(".selector").sortable("option", "containment");
+
+// //Setter
+// $(".selector").sortable("option", "containment", "parent");
+
+// $(".selector").sortable({
+// 	cursor : "move"
+// });
+
+// //Getter
+// var cursor = $(".selector").sortable("option", "cursor");
+
+// //Setter
+// $(".selector").sortable("option", "cursor", "move");
+
+// $(".selector").sortable({
+// 	cursorAt : { left : 5 }
+// });
+
+// //Getter
+// var cursorAt = $(".selector").sortable("option", "cursorAt");
+
+// //Setter
+// $(".selector").sortable("option", "cursorAt", { left : 5 });
+
+// $(".selector").sortable({
+// 	delay : 150
+// });
+
+// //Getter
+// var delay = $(".selector").sortable("option", "delay");
+
+// //Setter
+// $(".selector").sortable("option", "delay", 150);
+
+// $(".selector").sortable({
+// 	disabled : true
+// });
+
+// //Getter
+// var disabled = $(".selector").sortable("option", "disabled");
+
+// //Setter
+// $(".selector").sortable("option", "disabled", true);
+
+// $(".selector").sortable({
+// 	distance : 5
+// });
+
+// //Getter
+// var distance = $(".selector").sortable("option", "distance");
+
+// //Setter
+// $(".selector").sortable("option", "distance", 5);
+
+// $(".selector").sortable({
+// 	dropOnEmpty : false
+// });
+
+// //Getter
+// var dropOnEmpty = $(".selector").sortable("option", "dropOnEmpty");
+
+// //Setter
+// $(".selector").sortable("option", "dropOnEmpty", false);
+
+// $(".selector").sortable({
+// 	cursorAt : { left : 5 }
+// });
+
+// //Getter
+// var cursorAt = $(".selector").sortable("option", "cursorAt");
+
+// //Setter
+// $(".selector").sortable("option", "cursorAt", { left : 5 });
+
+// $(".selector").sortable({
+// 	delay : 150
+// });
+
+// //Getter
+// var delay = $(".selector").sortable("option", "delay");
+
+// //Setter
+// $(".selector").sortable("option", "delay", 150);
+
+// $(".selector").sortable({
+// 	disabled : true
+// });
+
+// //Getter
+// var disabled = $(".selector").sortable("option", "disabled");
+
+// //Setter
+// $(".selector").sortable("option", "disabled", true);
+
+// $(".selector").sortable({
+// 	distance : 5
+// });
+
+// //Getter
+// var distance = $(".selector").sortable("option", "distance");
+
+// //Setter
+// $(".selector").sortable("option", "distance", 5);
+
+// $(".selector").sortable({
+// 	dropOnEmpty : false
+// });
+
+// //Getter
+// var dropOnEmpty = $(".selector").sortable("option", "dropOnEmpty");
+
+// //Setter
+// $(".selector").sortable("option", "dropOnEmpty", false);
+
+// $(".selector").sortable({
+// 	forceHelperSize : true
+// });
+
+// //Getter
+// var forceHelperSize = $(".selector").sortable("option", "forceHelperSize");
+
+// //Setter
+// $(".selector").sortable("option", "forceHelperSize", true);
+
+// $(".selector").sortable({
+// 	forcePlaceholderSize : true
+// });
+
+// //Getter
+// var forcePlaceholderSize = $(".selector").sortable("option", "forcePlaceholderSize");
+
+// //Setter
+// $(".selector").sortable("option", "forcePlaceholderSize", true);
+
+// $(".selector").sortable({
+// 	grid : [ 20, 10 ]
+// });
+
+// //Getter
+// var grid = $(".selector").sortable("option", "grid");
+
+// //Setter
+// $(".selector").sortable("option", "grid", [ 20, 10]);
+
+// $(".selector").sortable({
+// 	handle : ".handle"
+// });
+
+// //Getter
+// var handle = $(".selector").sortable("option", "handle");
+
+// //Setter
+// $(".selector").sortable("option", "handle", ".handle");
+
+// $(".selector").sortable({
+// 	helper : "clone"
+// });
+
+// //Getter
+// var helper = $(".selector").sortable("option", "helper");
+
+// //Setter
+// $(".selector").sortable("option", "helper", "clone");
+
+// $(".selector").sortable({
+// 	items : "> li"
+// });
+
+// //Getter
+// var items = $(".selector").sortable("option", "items");
+
+// //Setter
+// $(".selector").sortable("option", "items", "> li");
+
+// $(".selector").sortable({
+// 	opacity : 0.5
+// });
+
+// //Getter
+// var opacity = $(".selector").sortable("option", "opacity");
+
+// //Setter
+// $(".selector").sortable("option", "opacity", 0.5);
+
+// $(".selector").sortable({
+// 	placeholder : "sortable-placeholder"
+// });
+
+// //Getter
+// var placeholder = $(".selector").sortable("option", "placeholder");
+
+// //Setter
+// $(".selector").sortable("option", "placeholder", "sortable-placeholder");
+
+// $(".selector").sortable({
+// 	revert : true
+// });
+
+// //Getter
+// var revert = $(".selector").sortable("option", "revert");
+
+// //Setter
+// $(".selector").sortable("option", "revert", true);
+
+// $(".selector").sortable({
+// 	scroll : false
+// });
+
+// //Getter
+// var scroll = $(".selector").sortable("option", "scroll");
+
+// //Setter
+// $(".selector").sortable("option", "scroll", false);
+
+// $(".selector").sortable({
+// 	scrollSensitivity : 10
+// });
+
+// //Getter
+// var scrollSensitivity = $(".selector").sortable("option", "scrollSensitivity");
+
+// //Setter
+// $(".selector").sortable("option", "scrollSensitivity", 10);
+
+// $(".selector").sortable({
+// 	scrollSpeed : 40
+// });
+
+// //Getter
+// var scrollSpeed = $(".selector").sortable("option", "scrollSpeed");
+
+// //Setter
+// $(".selector").sortable("option", "scrollSpeed", 40);
+
+// $(".selector").sortable({
+// 	tolerance : "pointer"
+// });
+
+// //Getter
+// var tolerance = $(".selector").sortable("option", "tolerance");
+
+// //Setter
+// $(".selector").sortable("option", "tolerance", "pointer");
+
+// $(".selector").sortable({
+// 	zIndex : 9999
+// });
+
+// //Getter
+// var zIndex = $(".selector").sortable("option", "zIndex");
+
+// //Setter
+// $(".selector").sortable("option", "zIndex", 9999);
+
+// $(".selector").sortable("cancel");
+
+// $(".selector").sortable("destroy");
+
+// $(".selector").sortable("disable");
+
+// $(".selector").sortable("enable");
+
+// $(".selector").sortable("instance");
+
+// var isDisabled = $(".selector").sortable("option", "disabled");
+
+// var options = $(".selector").sortable("option");
+
+// $(".selector").sortable("option", "disable", true);
+
+// $(".selector").sortable("option", {disable : true});
+
+// $(".selector").sortable("refresh");
+
+// $(".selector").sortable("refreshPositions");
+
+// var sorted = $(".selector").sortable("serialize", { ket : "sort"});
+
+// $(".selector").sortable("toArray");
+
+// $(".selector").sortable("widget");
+
+// $( ".selector" ).sortable({
+//   activate: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortactivate", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   beforeStop: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortbeforestop", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   change: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "change", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   create: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortcreate", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   deactivate: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortdeactivate", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   out: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortout", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   over: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortover", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   receive: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortreceive", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   remove: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortremove", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   sort: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sort", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   start: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortstart", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   stop: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortstop", function( event, ui ) {} );
+
+// $( ".selector" ).sortable({
+//   update: function( event, ui ) {}
+// });
+
+// $( ".selector" ).on( "sortupdate", function( event, ui ) {} );
+
+// $("#sortable").sortable();
+
+// $("#selectable").selectable();
+
+// $( "#resizable" ).resizable();
+
+// $( "#draggable" ).draggable();
+// $( "#droppable" ).droppable({
+//   drop: function() {
+//     alert( "dropped" );
+//   }
+// });
+
+// $("div").click(function() {
+// 	$(this).addClass("big-blue", 1000,"easeOutBounce");
+// });
+
+// var clippings = [
+// 	{
+// 		top: 10,
+// 		right: 50,
+// 		bottom: 50,
+// 		left: 5
+// 	},
+// 	{
+// 		top: 0,
+// 		right: 150,
+// 		bottom: 150,
+// 		left: 0
+// 	}];
+// 	var index = 1;
+// 	var box = $(".clipped").cssClip(clippings[0]);
+// 	$(document).click(function() {
+// 		box.animate({
+// 			clip: clippings[index ++ %2]
+// 		}, 2000);
+// 	});
+
+// 	$("button").click(function() {
+// 		$("div").hide("drop",{direction: "down"}, "slow");
+// 	});
+
+// $("input").labels().addClass("ui-state-highlight");
+
+// $("#position1").position({
+// 	my:"center",
+// 	at:"center",
+// 	of:"#targetElement"
+// });
+
+// $("#position2").position({
+// 	my:"left top",
+// 	at:"left top",
+// 	of:"#targetElement"
+// });
+
+// $("#position3").position({
+// 	my:"right center",
+// 	at:"right bottom",
+// 	of:"#targetElement"
+// });
+
+// $(document).mousemove(function( event) {
+// 	$("#position4").position({
+// 		my:"left+3 bottom-3",
+// 		of:event,
+// 		collision : "fit"
+// 	});
+// });
+
+
+// $("div").click(function() {
+// 	$(this).removeClass("big-blue", 1000, "easeInBack");
+// });
+
+// $("button").click(function() {
+// 	$("div").show("fold", 1000);
+// });
+
+// $("button").click(function() {
+// 	$("div").toggle("fold", 1000);
+// });
+
+// $("div").click(function() {
+// 	$(this).toggleClass("big-blue", 1000, "easeOutSine");
+// });
+
+
+// var clippings = [
+// 	{
+// 		top : 10,
+// 		right: 50,
+// 		bottom: 50,
+// 		left: 5
+// 	},
+// 	{
+// 		top : 0,
+// 		right: 150,
+// 		bottom: 150,
+// 		left: 0
+// 	}
+// 	]
+// var index = 1;
+// var box = $(".clipped").cssClip(clippings[0]);
+
+// $( document).click( function() {
+// 	box.animate({
+// 		clip : clippings[index ++ %2]
+// 	}, 2000);
+// });
+
+// $(document).click(function() {
+// 	$("div").effect("bounce", "slow");
+// });
+
+// $("button").click(function() {
+// 	$("div").hide("drop",{direction:"down"}, "slow");
+// });
+
+// $("#one").data("color", "blue");
+// $("#three").data("color", "green");
+
+// $(":data(color)").each(function() {
+// 	var element = $( this);
+// 	element.css("backgroundColor", element.data("color"));
+// });
+
+// $(":focusable").css("border-color","red");
+// $(":tabbable").css("border-color","red");
+// _create:function() {
+// 	this._bindFormHandler();
+// }
+
+// _destroy: function() {
+// 	this._unbindFormResetHandler();
+// }
+
+// $.widget("custom.colorize",[$.ui.formResetMixin, {
+// 	_create:function() {
+// 		this.watch = $("<div>")
+// 		.addClass("demo-colorze-swatch")
+// 		.insertAfter(this.element);
+
+// 		this.refresh();
+// 		this._bindFormResetHandler();
+// 		this._on({ keyup: "refresh"});
+// 	},
+// 	refresh: function() {
+// 		this.swatch.css("background-color", this.element.val());
+// 	}
+// 	,
+// 	_destroy: function(){
+// 		this.swatch.remove();
+// 		this._unbindFormResetHandler();
+// 	}
+// }]);
+// $("#colorize").colorize();
+
+// $.widget("custom.colorize",[$.ui.formResetMixin, {
+// 	_create:function() {
+// 		this.watch = $("<div>")
+// 		.addClass("demo-colorize-swatch")
+// 		.insertAfter(this.element);
+
+// 		this.refresh();
+// 		this._bindFormResetHandler();
+// 		this._on({ keyup: "refresh"});
+// 	},
+// 	refresh: function() {
+// 		this.swatch.css("background-color", this.element.val());
+// 	}
+// 	,
+// 	_destroy: function(){
+// 		this.swatch.remove();
+// 		this._unbindFormResetHandler();
+// 	}
+// }]);
+// $("#colorize").colorize();
+
+// var Highlighter = function( options, element ) {
+// 	this.options = options;
+// 	this.element = $( element );
+// 	$this._set( 800 );
+// };
+// Highlighter.prototype = {
+// 	toggle: function() {
+// 		this._set( this.element.css("font-weight") === 4000 ? 800: 400)
+// 	}, 
+// 	_set: function( value ) {
+// 		this.element.css("font-weight", value);
+// 	}
+// };
+
+// // Hook up the plugin
+// $.widget.bridge("colorToggle", Highlighter);
+
+// // Initialize it in divs
+// $("div").colorToggle().click( function() {
+// 	// Call the pulic method on click
+// 	$( this ).colorToggle("toggle");
+// });
+
+// $("#elem").progressbar();
+
+// $("#elem").progressbar({ value : 20});
+
+// var options = {modal: true, show: "slow"};
+// $("#dialog1").dialog( options);
+// $("#dialog2").dialog( options, { autoOpen: false});
+
+// $.ui.progressbar.prototype.option.value = 80;
+
+// $("#elem").progressbar("value");
+// $("#elem").progressbar("value", 40);
+
+// $("#elem")
+// .progressbar("value", 90)
+// .addClass("almost-done");
+
+// $("#elem").bind("progressbarchange", function() {
+// 	alert("The value has changed.");
+// });
+
+// $("#elem").progressbar({
+// 	change: function() {
+// 		alert("The value has changed");
+// 	}
+// });
+
+// $("#elem").progressbar("instance");
+// $("#not-a-progressar").progressbar("instance"); // undefined
+
+// $("#elem").is(":data('ui-progressar')"); // true
+// $("#elem").is(":data('ui-draggable')"); // false
+
+// $("#elem").notExistentWidget("instance"); //typeError
+// $("#elem").is(":data('ui-nonExistenWidget')"); // false
+
+// $(":dat('ui-progressbar')");
+
+// $(".selector").progressar({
+// 	classes : {
+// 		"ui-progressar" : "highlight"
+// 	}
+// });
+
+// //Getter
+// var classes = $(".selector").widget("option", "classes");
+
+// // Setter, override all classes
+// $(".selector").widget("option", "classes",{"custom-header":"icon-warning"});
+
+// // Setter, override just one class
+// $(".selector").widget("option", "classes.custom-header", "icon-warning");
+
+// $(".selector").widget({
+// 	diable : true
+// });
+
+// //Getter
+// var disabled = $(".selector").widget("option", "disabled");
+
+// //Setter
+// (".selector").widget("option", "disabled", true);
+
+// $(".selector").widget({
+// 	hide : {effect :"explode", duration: 1000}
+// });
+
+// //Getter
+// var hide = $(".selector").widget("option", "hide");
+
+// //Setter
+// (".selector").widget("option", "hide", {effect :"explode", duration: 1000});
+
+// $(".selector").widget({
+// 	show : {effect :"blind", duration: 800}
+// });
+
+// //Getter
+// var show = $(".selector").widget("option", "show");
+
+// //Setter
+// (".selector").widget("option", "show", {effect :"blind", duration: 800});
+
+// this._addClass("ui-progressar");
+// this._addClass(this.popup,"demo-popup-header", "ui-font");
+// this._addClass(this.liveRegon,"ui-helper-hidden-accessible");
+
+// _create: function() {
+// 	this.element.css("background-color": this.options.color);
+// }
+
+// this._delay(this._foo, 100);
+
+// _destroy: function() {
+// 	this.element.removeClass("my-widget");
+// }
+
+// this._focusable( this.element.find(".my-items"));
+
+// _getCreateEventData : function() {
+// 	return this.options;
+// }
+// _getCreateOptions: function() {
+// 	return { id: this.element.attr("if")};
+// }
+
+// this._hide( this.element, this.options.hide, function() {
+// 	// Reomve the lement from the DOm when it's fully hidden
+// 	$( this ).remove();
+// });
+
+// this._hoverable( this.element.find("div"));
+
+// _init: function() {
+// 	if (this.options.autoOpen) {
+// 		this.open();
+// 	}
+// }
+
+// this._off( this.element,"click");
+
+// this._on(this.element, {
+// 	"click a": function( event) {
+// 		event.preventDefault();
+// 	}
+// });
+
+// this._removeClass("ui-progressbar");
+// this._removeClass(this.popup, "demo-popup-header", "ui-font");
+// this._removeClass(this.liveRegion, "ui-helper-hidden-accessible");
+
+// _SetOption: funciton( key, value) {
+// 	if (key === "width") {
+// 		this.element.width( value);
+// 	}
+// 	if (key ==="height") {
+// 		this.element.height( value);
+// 	}
+// 	this._supper( key, value);
+// }
+
+// _SetOption: function() {
+// 	var that = this,
+// 	resize = false;
+
+// 	$.each( options, funciton( key, value) {
+// 		that._SetOption( key, value);
+// 		if( key === "height" || key === "width") {
+// 			resixe = true;
+// 		}
+// 	});
+
+// 	if (resize) {
+// 		this.resize();
+// 	}
+// }
+
+// this._show( this.element, this.options.show, funciton() {
+// 	// Focus the element when it's fully visibele
+// 	this.focus();
+// });
+
+// _setOption: function( key, value) {
+// 	if (key === "title") {
+// 		this.element.find("h3").text( value);
+// 	}
+// 	this._super( key, value);
+// }
+
+// _SetOption: funciton( key, value) {
+// 	if (key === "title") {
+// 		this.element.fond( "h3").text( value);
+// 	}
+// 	this._supperApply( arguments);
+// }
+
+// this._toggleClass( null, "ui-state-disabled", value);
+
+// this._on( this.element, {
+// 	keydown : function( event) {
+// 		// Pass the original event so that the custom search event has
+// 		// usefull infomation, such as key code
+// 		this._trigger("search", event, {
+// 			// pass additional information unique to this event
+// 			value: this.element.val()
+// 		});
+// 	} 
+// });
+
+// $(".selector").widget({
+// 	create: function( evnet, ui) {}
+// });
+
+// $(".selector").on("widgetcreate", function( evnet, ui) {});
+
+// $(".selector").mouse({
+// 	cancel : ".title"
+// });
+
+// //Getter
+// var cancel = $(".selector").mouse("option", "cancel");
+
+// //Setter
+// (".selector").mouse("option", "cancel", ".title");
+
+// $(".selector").mouse({
+// 	delay : 300
+// });
+
+// //Getter
+// var delay = $(".selector").mouse("option", "delay");
+
+// //Setter
+// (".selector").mouse("option", "delay", 300);
+
+// $(".selector").mouse({
+// 	distance : 10
+// });
+
+// //Getter
+// var distance = $(".selector").widget("option", "distance");
+
+// //Setter
+// (".selector").widget("option", "distance", 10);
+
+// $(".selector").mouse("_mouseCapture");
+// $(".selector").mouse("_mouseDelayMet");
+// $(".selector").mouse("_mouseDestroy");
+// $(".selector").mouse("_mouseDown");
+// $(".selector").mouse("_mouseDrag");
+// $(".selector").mouse("_mouseInit");
+// $(".selector").mouse("_mouseMove");
+// $(".selector").mouse("_mouseStart");
+// $(".selector").mouse("_mouseStop");
+// $(".selector").mouse("_mouseUp");
+
+// $(".selector").accordion({
+// 	active : 2
+// });
+
+// //Getter
+// var active = $(".selector").widget("option", "active");
+
+// //Setter
+// (".selector").widget("option", "active", 2);
+
+// $(".selector").accordion({
+// 	distance : 10
+// });
+
+// //Getter
+// var distance = $(".selector").accordion("option", "distance");
+
+// //Setter
+// (".selector").accordion("option", "distance", 10);
+
+// $(".selector").accordion({
+// 	animate : 200
+// });
+
+// //Getter
+// var animate = $(".selector").accordion("option", "animate");
+
+// //Setter
+// (".selector").accordion("option", "animate", 200);
+
+// {
+// 	"ui-accordion-header":"ui-corner-top",
+// 	"ui-accordion-collapsed":"ui-corner-all",
+// 	"ui-accordion-content":"ui-corner-bottom"
+// }
+
+// $(".selector").accordion({
+// 	classes : {
+// 		"ui-accordion":"highlight"
+// 	}
+// });
+
+// // Getter
+// var themeClass = $(".selector").accordion("option", "classes.ui-accordion");
+
+// // Setter
+// $(".selector").accordion("option", "classes.ui-accordion", "highlight");
+
+// $(".selector").accordion({
+// 	collapsible : true
+// });
+
+// //Getter
+// var collapsible = $(".selector").accordion("option", "collapsible");
+
+// //Setter
+// (".selector").accordion("option", "collapsible", true);
+
+// $(".selector").accordion({
+// 	disabled : true
+// });
+
+// //Getter
+// var disabled = $(".selector").accordion("option", "disabled");
+
+// //Setter
+// (".selector").accordion("option", "disabled", true);
+
+// $(".selector").accordion({
+// 	event: "mouveover"
+// });
+
+// //Getter
+// var event = $(".selector").accordion("option", "event");
+
+// //Setter
+// (".selector").accordion("option", "event", "moveover");
+
+// $(".selector").mouse({
+// 	header : "h3"
+// });
+
+// //Getter
+// var header = $(".selector").widget("option", "header");
+
+// //Setter
+// (".selector").widget("option", "header", "h3");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// {
+// 	"header" : "ui-icon-triangle--e",
+// 	"activeHeader" : "ui-icon-trigle--s"
+// }
+// $(".selector").accordion({
+// 	icons : {
+// 		"header" : "ui-icon-plus","activeHeader":"ui-icon-minus"
+// 	}
+// });
+
+// $(".selector").mouse({
+// 	icon : {"header": "ui-icon-plus", "activeHeader" : "ui-icon-minus"}
+// });
+
+// //Getter
+// var icon = $(".selector").accordion("option", "icons");
+
+// // Setter
+// $(".selector").accordion("option", "icond", {"header":"ui-icon-plus", "activeHeader" : "ui-icon0minus"});
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $(".selector").mouse({
+// 	heightStyle : "fill"
+// });
+
+// //Getter
+// var heightStyle = $(".selector").widget("option", "heightStyle");
+
+// //Setter
+// (".selector").widget("option", "heightStyle", "fill");
+
+// $("#accordion").accordion();
+// $("#autocomplete").autocomplete({
+// 	source: ["c++","java","php","coldfusion","javascrip", "asp","ruby"]
+// });
+
+// var tags = ["c++", "java","javascipt","php","coldfusion", "asp","ruby"];
+// $("#autocomplete").autocomplete({
+// 	source : function( request, response) {
+// 		var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex( request.term), "i");
+// 		response( $.grep( tags, function( item) {
+// 			return matcher.test( item );
+// 		}));
+// 	}
+// });
+
+// $("button").button();
+// $("#radio").buttonset();
+// $("input[type = 'radio']").checkboxradio();
+// $("#dialog").dialog({ autoOpen : false});
+// $("#opener").click(function() {
+// 	$("#dialog").dialog("open");
+// });
+
+// $("#datepicker").datepicker();
+
+// $("#menu").menu();
+
+// $("#progressbar").progressbar({
+// 	value: false
+// });
+
+// $("#number")
+// .selectmenu()
+// .selectmenu("menuWidget")
+// .addClass("overflow");
+
+// $("#slider").slider();
+
+// $("#spinner").spinner();
+
+// $("#tabs").tabs();
+
+// $(document).tooltip();
+$( document ).tooltip();
+// file 16
+// file 17
+// file 18
+// file 19
+// file 20
+// file 21
+// file 22
+// file 23
+// file 24
+// file 25
+// file 26
+// file 27
+// file 28
+// file 29
+// file 30
+// file 31
+// file 32
+// file 33
+

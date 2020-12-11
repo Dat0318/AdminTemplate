@@ -1,0 +1,115 @@
+.http-call-modal-window,
+.http-call-modal-window * {
+  background-color: transparent !important;
+  border-width: 0 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.http-call-modal-window .modal-content {
+  overflow: visible;
+}
+.hr-dash-widget {
+  width: 100%;
+  height: 550px;
+  border: 0;
+}
+.stretched-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+.stretched-modal .modal-content .modal-body {
+  flex-grow: 1;
+}
+@media (max-width: 767px) {
+  .hr-dash-widget {
+    height: 0;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    width: 0;
+  }
+  .hr-dash-widget-modal .modal-dialog {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 !important;
+  }
+  .hr-dash-widget-modal .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+#submitWorkFiles button {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#submitWorkFiles .file-upload-list {
+  padding-left: 0;
+  margin-top: 10px;
+}
+.blueberry {
+  color: #14bff4;
+}
+.granite {
+  color: #a0a0a0;
+}
+.wm-font-weight-normal {
+  font-weight: normal !important;
+}
+.ng-hide {
+  display: none !important;
+}
+.disable-capitalize {
+  text-transform: none !important;
+}
+.mh200 {
+  min-height: 200px;
+}
+.w350 {
+  width: 350px;
+}
+.w380 {
+  width: 380px;
+}
+.w450 {
+  width: 450px;
+}
+.wm-cursor-pointer {
+  cursor: pointer !important;
+}
+.wm-flex-direction-column {
+  flex-direction: column;
+}
+.modal-body .wmAlert.alert {
+  margin: 10px 0 30px 0 !important;
+}
+.animation-delay {
+  animation-delay: 200ms;
+}
+.display-inline {
+  display: inline !important;
+}
+.full-page-loading-simulation {
+  margin-top: 50%;
+}
+_:-ms-fullscreen,
+:root .modal-sticky .overflow-y-auto.modal-flex-container {
+  display: block !important;
+}
+@media (min-width: 768px) {
+  _:-ms-fullscreen,
+  :root .modal-sticky .modal-dialog {
+    height: 100%;
+  }
+}
+.modal-overlay .modal-content {
+  height: auto;
+}
+
+.air-card section.air-card-hover:hover .user-presence-indicator {
+  border-color: #f2f2f2;
+}

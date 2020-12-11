@@ -1,0 +1,125 @@
+.table-sprite {
+    background: url(/images/sprites-c/table-saf163e9ca5.png) no-repeat
+}
+
+.oDataTable th {
+    white-space: nowrap
+}
+
+.oDataTable .oGroupColumn {
+    color: #494949
+}
+
+.oDataTable td.oFirstColumn.oGroupColumn {
+    font-weight: 400!important;
+    font-family: "Gotham Bold"
+}
+
+.oDataTable .oGrandTotal {
+    font-weight: 400!important;
+    font-family: "Gotham Bold"
+}
+
+.oDataTable .oGroupHeader {
+    padding: 8px 4px;
+    background-color: #f2f2f0;
+    color: #000
+}
+
+.oDataTable tr:not(:first-child) .oGroupHeader {
+    border-top: 1px solid #d7d8d6
+}
+
+.oDataTable .oFirstSubHeader {
+    padding-top: 30px;
+    border-top-width: 1px
+}
+
+.oDataTable .oGroupHeaderRow td {
+    border: 0;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 12px;
+    height: 18px
+}
+
+.oDataTable .oCurrentDay {
+    background-color: #CBEEFD
+}
+
+.oDataTable .oFutureDay {
+    background: url(/images/table_bg_future.gif) left top, #fff
+}
+
+.oDataTable td:first-child {
+    border-left-width: 0
+}
+
+.oDataTable td:last-child {
+    border-right-width: 0
+}
+
+.oDataTable td.oFirstColumn,
+.oDataTable td.oGroupHeader {
+    border-left-width: 1px
+}
+
+.oDataTable td.oLastColumn,
+.oDataTable td.oGroupHeader {
+    border-right-width: 1px
+}
+
+.oWeeklySummaryTable {
+    table-layout: fixed
+}
+
+.oWeeklySummaryTable th {
+    padding: 6px 0
+}
+
+.oWeeklySummaryTable td {
+    padding: 8px 0 7px
+}
+
+.oWeeklySummaryTable .oContractInfo {
+    padding-right: 5px
+}
+
+.oWeeklySummaryTable .oFirstColumn {
+    padding-left: 11px
+}
+
+.oWeeklySummaryTable .oLastColumn {
+    padding-right: 11px
+}
+
+.oWeekSelector {
+    display: inline-block;
+    margin: 0 10px
+}
+
+.oWeekSelector input {
+    margin: 0
+}
+
+.oWeekSelector>label {
+    margin-right: 6px
+}
+
+.oWeekSelector>.oPreviousIcon {
+    margin-right: 5px
+}
+
+.oWeekSelector .oDisplay {
+    text-align: left;
+    margin: 0;
+    width: 200px
+}
+
+.oWeekSelector .oLabelDatePicker:before {
+    top: 9px
+}
+
+#ui-datepicker-div {
+    display: none
+}

@@ -1,0 +1,52 @@
+.wm-contracts-card .tab-content {
+  padding-top: 0 !important;
+}
+.wm-contracts-card ul.nav-tabs {
+  border-bottom: 0 !important;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .m-0-top-lg {
+    margin-top: 0 !important;
+  }
+  .p-lg-bottom-lg {
+    margin-bottom: 30px !important;
+  }
+}
+@media (max-width: 991px) {
+  .top-smfs .alert {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+.cm-upwork-logo {
+  color: #7dd83e;
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: middle;
+  margin: 0;
+}
+.cm-manager-info {
+  position: relative;
+}
+.cm-manager-avatar {
+  width: 40px;
+  height: 40px;
+}
+.cm-manager-status {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+}
+.cm-manager-status .user-presence-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  border: 2px solid #fff;
+  margin: 0;
+}
+.cm-manager-subtitle {
+  color: #7d7d7d !important;
+  font-weight: 300 !important;
+}

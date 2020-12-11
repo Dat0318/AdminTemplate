@@ -1,0 +1,455 @@
+.availability .o-left-border {
+  border-left: 1px solid #f2f2f2;
+  padding-left: 30px;
+}
+@media (max-width: 767px) {
+  .availability .o-left-border {
+    border-left: none !important;
+    padding-left: 0;
+  }
+}
+.drop-box {
+  background: none repeat scroll 0 0 #f8f8f8;
+  border: 5px dashed #ddd;
+  text-align: center;
+}
+.drop-box.dragover {
+  border-color: #7bd454;
+}
+.eo-profile-image-upload > .row > .column-wrapper-right .btn-link {
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .up-thumb-or-video .eo-button-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  .up-thumb-or-video .up-thumb-or-video-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .up-thumb-or-video .glyphicon {
+    margin-right: 0;
+    margin-bottom: 10px !important;
+  }
+}
+.up-thumb-crop-dialog > .modal-dialog.modal-lg,
+.portraitDialog > .modal-dialog.modal-lg {
+  width: 760px;
+}
+@media (max-width: 767px) {
+  .up-thumb-crop-dialog > .modal-dialog.modal-lg,
+  .portraitDialog > .modal-dialog.modal-lg {
+    width: 100% !important;
+  }
+}
+@media (max-width: 479px) {
+  .up-thumb-crop-dialog > .modal-dialog.modal-lg .drop-box,
+  .portraitDialog > .modal-dialog.modal-lg .drop-box {
+    width: auto;
+    height: 175px;
+  }
+  .up-thumb-crop-dialog > .modal-dialog.modal-lg .crop-area-container,
+  .portraitDialog > .modal-dialog.modal-lg .crop-area-container {
+    margin-bottom: 10px;
+  }
+  .up-thumb-crop-dialog
+    > .modal-dialog.modal-lg
+    .crop-area-container
+    .crop-area-wrapper,
+  .portraitDialog
+    > .modal-dialog.modal-lg
+    .crop-area-container
+    .crop-area-wrapper {
+    width: auto10;
+    height: 180px;
+  }
+  .up-thumb-crop-dialog
+    > .modal-dialog.modal-lg
+    .crop-area-container
+    .crop-area-wrapper
+    .crop-area,
+  .portraitDialog
+    > .modal-dialog.modal-lg
+    .crop-area-container
+    .crop-area-wrapper
+    .crop-area {
+    width: auto;
+    height: 175px;
+    overflow: hidden;
+    background: #f9f9f9;
+  }
+}
+.eo-profile-image-upload .column-wrapper-left {
+  max-width: none;
+}
+.eo-profile-image-upload
+  .column-wrapper-left
+  .crop-area-container
+  .crop-area-wrapper
+  .crop-area {
+  width: auto;
+}
+.o-skill-tag {
+  font-weight: normal;
+  cursor: pointer;
+}
+.fe-ui-window.fe-ui-profile-visibility .modal-title .glyphicon,
+.fe-ui-application.fe-ui-profile-visibility .modal-title .glyphicon {
+  margin: 0;
+}
+.fe-ui-window.fe-ui-profile-visibility .b-info-text,
+.fe-ui-application.fe-ui-profile-visibility .b-info-text {
+  min-height: 280px;
+}
+.fe-ui-window.fe-ui-profile-visibility .b-visibility-list,
+.fe-ui-application.fe-ui-profile-visibility .b-visibility-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 0 30px;
+  align-content: space-between;
+}
+.fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box,
+.fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.active:after,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.active:after {
+  border-left: 4px solid rgb(255, 115, 0);
+  left: -2px;
+  right: auto;
+  top: -2px;
+  bottom: -2px;
+}
+.fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box .icon,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box
+  .icon {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  vertical-align: middle;
+  width: 30px;
+}
+.fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box .text,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box
+  .text {
+  display: inline-block;
+  width: 90%;
+  white-space: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled,
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled:active,
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled:hover,
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled],
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled]:active,
+.fe-ui-window.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled]:hover,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled:active,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box.disabled:hover,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled],
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled]:active,
+.fe-ui-application.fe-ui-profile-visibility
+  .b-visibility-list
+  .eo-button-box[disabled]:hover {
+  color: #a0a0a0 !important;
+  border-color: #e0e0e0;
+  background: #e0e0e0 !important;
+  text-shadow: none;
+  text-decoration: none;
+  outline: none !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+.fe-ui-window.fe-ui-profile-visibility .fe-ui-profile-visibility-directive,
+.fe-ui-application.fe-ui-profile-visibility
+  .fe-ui-profile-visibility-directive {
+  position: relative;
+}
+.fe-ui-window.fe-ui-profile-visibility
+  .fe-ui-profile-visibility-directive
+  .icon,
+.fe-ui-application.fe-ui-profile-visibility
+  .fe-ui-profile-visibility-directive
+  .icon {
+  margin: 0;
+  vertical-align: middle;
+}
+.fe-ui-window.fe-ui-profile-visibility .fe-ui-profile-visibility-directive .btn,
+.fe-ui-application.fe-ui-profile-visibility
+  .fe-ui-profile-visibility-directive
+  .btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fe-ui-window.fe-ui-profile-visibility .modal-header .close:before,
+.fe-ui-application.fe-ui-profile-visibility .modal-header .close:before {
+  content: '';
+}
+.card-grey-bg {
+  background-color: #f9f9f9;
+}
+.fe-progress-bar {
+  border: 1px solid rgb(255, 115, 0);
+  height: 10px;
+  width: 100%;
+}
+.fe-progress-bar-filled {
+  background-color: rgb(255, 115, 0);
+  height: 100%;
+  width: 100%;
+}
+.fe-percent-title {
+  vertical-align: top;
+  line-height: 1;
+  font-size: 10px;
+}
+.fe-fwh-spinner {
+  position: absolute;
+}
+.fe-cat-wrapper {
+  position: relative;
+}
+.fe-ui-pc-pencil {
+  margin: 0;
+  padding: 0;
+}
+.fe-ui-profile-completeness label:first-of-type a:hover {
+  text-decoration: none;
+}
+.fe-ui-availability .icon {
+  margin: 0;
+}
+.fe-fwh-increase-completnes .media .glyphicon {
+  color: rgb(255, 115, 0);
+}
+.is-mobile-app #layout > .container {
+  padding-top: 0 !important;
+}
+.is-mobile-app .fe-profile-completeness {
+  display: none;
+}
+.msProgress .progress-bar::before {
+  width: 100% !important;
+}
+.tile-tip {
+  position: static;
+}
+.tile-tip-url {
+  position: absolute;
+  bottom: 0;
+}
+.client-success-rating {
+  display: inline-block;
+}
+.job-success-indicator {
+  position: relative;
+}
+.client-success-feedback-value {
+  position: relative;
+  top: -2px;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.tile-separator {
+  position: absolute;
+  border-left: 1px solid #e0e0e0;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  right: 280px;
+}
+.job-success-last-updated-label {
+  position: absolute;
+  top: 220px;
+  right: 37px;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+}
+.o-prompt-modal > .modal-header > h1,
+.o-form-modal > .modal-header > h1 {
+  font-size: 18px;
+  margin: 0;
+}
+.o-prompt-modal > .modal-footer,
+.o-form-modal > .modal-footer {
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+}
+.o-form-modal > .modal-body > .row {
+  margin-top: 10px;
+}
+.form-error-bottom {
+  margin: 10px 0 0 0;
+  position: relative;
+}
+.label-rank1 {
+  background-color: #fec324;
+}
+.label-rank2 {
+  background-color: #b1c1cb;
+}
+.label-rank3 {
+  background-color: #a9662a;
+}
+.label-score10 {
+  background-color: #0682d1;
+}
+.label-score20 {
+  background-color: #00a0e8;
+}
+.label-score30 {
+  background-color: #03c3e5;
+}
+.label-below-avg {
+  background-color: #e55414;
+}
+.label-failed {
+  color: #ef4b0a;
+}
+.m-none-top {
+  margin-top: 0;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.direction-column-reverse {
+  flex-direction: column-reverse;
+}
+@media (max-width: 768px) {
+  .fe-reverse-md {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.fe-jss-bar {
+  margin-top: 30px;
+}
+.fe-chart-container {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0 0 150px;
+}
+@media (max-width: 991px) {
+  .fe-chart-container {
+    display: flex;
+    justify-content: center;
+  }
+  .fe-chart-container svg#odesk_line_chart {
+    position: static !important;
+  }
+  .text-center-xs {
+    text-align: center !important;
+  }
+  .justify-content-center-xs {
+    justify-content: center;
+  }
+}
+.fe-chart-container svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.fe-mystats-agencies .dropdown-toggle,
+.btn-group.dropdown {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .modal-sticky .modal-dialog .modal-content {
+    max-height: none;
+    min-height: auto;
+    height: auto;
+  }
+  .modal-sticky .modal-body.overflow-y-auto {
+    overflow-y: visible;
+  }
+}
+@media (max-width: 768px) {
+  .eo-dropdown-menu {
+    max-height: 270px;
+    overflow-y: auto;
+  }
+}
+.glyphicon.text-success {
+  color: rgb(255, 115, 0);
+}
+.width-100 {
+  width: 100%;
+}
+.up-page-wrapper {
+  min-height: 500px;
+}
+@media (min-width: 768px) {
+  body.modal-open:not(.ats) .modal-sticky .modal-dialog .modal-content {
+    max-height: none;
+    min-height: auto;
+    height: auto;
+  }
+  body.modal-open:not(.ats) .modal-sticky .overflow-y-auto {
+    overflow-y: visible !important;
+  }
+}
+up-dash-proposal-room {
+  display: block;
+}
+.up-dash-proposal-room {
+  overflow: hidden;
+  height: 500px;
+  position: relative;
+  padding-bottom: 0;
+}
+.up-dash-proposal-room iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .dropdown.open .dropdown-menu {
+    overflow-y: inherit !important;
+  }
+}

@@ -1,0 +1,139 @@
+/* widget page */
+/* defines the appearance of the UI iframe
+the iframe is resized whenever the UI changes size */
+#recursive-social-plugin {
+  width: 0;
+  height: 0;
+  border: none;
+  border-radius: 4px;
+  z-index: 2000006;
+  /* 1 less than the Recursive "kitchen sink" UI */
+  display: block;
+}
+#recursive-social-plugin.widget-invisible {
+  display: none;
+}
+/* optional user-created container. widget is installed into #rcrsv-widget-container if present. I think */
+#rcrsv-widget-container #recursive-social-plugin {
+  position: static;
+  bottom: auto;
+  left: auto;
+}
+/* desktop browsers: used fixed positioning like civilized men */
+.recursive-social-plugin {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+#rcrsv-replay-bouncer {
+  display: none;
+}
+/*
+position:fixed broken on iPad Safari, use absolute and js to emulate
+other mobile browsers may have the same problem
+*/
+.recursive-social-plugin-mobile {
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+#rcrsv-replay-bouncer {
+  display: none;
+}
+body.rcrsv-replay-bouncer-visible {
+  overflow: hidden;
+}
+body.rcrsv-replay-bouncer-visible #rcrsv-replay-bouncer {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000004;
+  filter: none !important;
+  -webkit-filter: none !important;
+  background-color: #0e1c2c;
+  opacity: .6;
+  pointer-events: none;
+  text-align: center;
+}
+body.rcrsv-replay-bouncer-visible #rcrsv-replay-bouncer .rcrsv-replay-bouncer-content {
+  display: inline-block;
+  border-radius: 4px;
+  width: 60%;
+  margin-top: 20%;
+  z-index: 2000005;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0e1c2c;
+  background-color: white;
+}
+body.rcrsv-replay-bouncer-visible #rcrsv-replay-bouncer .rcrsv-replay-bouncer-content p {
+  color: #0e1c2c;
+  padding: 10px 2px;
+  margin: 0;
+}
+body.rcrsv-replay-bouncer-visible > *:not(#recursive-social-plugin) {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+#rcrsv-notification-iframe {
+  border: none;
+  bottom: 90px;
+  height: 0;
+  min-width: 280px;
+  position: fixed;
+  right: 15px;
+  overflow: hidden;
+  width: 280px;
+  z-index: 2000006;
+}
+/* bottom bar is visible */
+#recursive-social-plugin.in-session {
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* bottom bar is hidden */
+#recursive-social-plugin.in-session.minimized-bottom-bar {
+  right: 0;
+  height: 40px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* UI full screen */
+#recursive-social-plugin.in-session.maximized {
+  height: 100%;
+}
+/* boost mouse pointer above Zendesk widget */
+#cwmn-panel .cwmn-pointers .cwmn-mouse-pointer {
+  pointer-events: none;
+  z-index: 17000000;
+}
+body.env-tda #cwmn-panel .cwmn-pointers .cwmn-mouse-pointer.cwmn-brand {
+  background: url('https://cdn.rcrsv.io/tda/assets/Cursor.png');
+  width: 60px;
+  height: 62px;
+  padding: 0;
+  border-radius: 0;
+}
+body.env-tda #cwmn-panel .cwmn-pointers .cwmn-mouse-pointer.cwmn-brand span {
+  display: none;
+}
+body.env-tda #cwmn-panel .cwmn-pointers .cwmn-mouse-pointer.cwmn-brand .cwmn-tooltip {
+  display: none !important;
+}
+body.env-tda #cwmn-panel .cwmn-pointers .cwmn-mouse-pointer.cwmn-brand:after {
+  border: none;
+}
+body.env-upwork {
+  /* move notifications to left side of the screen to avoid zendesk chat */
+}
+body.env-upwork #rcrsv-notification-iframe {
+  left: 15px;
+  right: auto;
+}

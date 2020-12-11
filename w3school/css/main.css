@@ -1,0 +1,42 @@
+.myArticle {
+  border: 1px solid blue; }
+
+.myNotes {
+  border: 2px solid red; }
+
+.myBox {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg); }
+
+.button-basic, .button-report, .button-submit {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px; }
+
+.button-report {
+  background-color: red; }
+
+.button-submit {
+  background-color: green;
+  color: white; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 18px;
+  color: #4169E1; }
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: green; }

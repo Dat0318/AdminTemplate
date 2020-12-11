@@ -1,0 +1,542 @@
+@media (max-width: 767px) {
+  .section-hero {
+    margin-bottom: 0;
+    padding: 43px 0 70px 0;
+  }
+  .section-hero .section-hero-subheading {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+}
+.faq-section .more-questions {
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: #666;
+}
+@media (max-width: 767px) {
+  .faq-section {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .faq-section .accordion .title a:after {
+    right: 0;
+  }
+}
+.clients-wrapper,
+.freelancers-wrapper,
+.security-wrapper {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .clients-wrapper,
+  .freelancers-wrapper,
+  .security-wrapper {
+    margin-bottom: 46px;
+  }
+}
+.clients-wrapper.ng-hide,
+.freelancers-wrapper.ng-hide,
+.security-wrapper.ng-hide {
+  opacity: 0;
+}
+.clients-wrapper .clients-row h2.more-space,
+.freelancers-wrapper .freelancers-row h2.more-space,
+.security-wrapper .security-row h2.more-space {
+  margin-bottom: 34px;
+}
+.clients-wrapper .clients-row h3,
+.freelancers-wrapper .freelancers-row h3,
+.security-wrapper .security-row h3 {
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .clients-wrapper .clients-row h3,
+  .freelancers-wrapper .freelancers-row h3,
+  .security-wrapper .security-row h3 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.clients-wrapper .clients-row ul,
+.freelancers-wrapper .freelancers-row ul,
+.security-wrapper .security-row ul {
+  margin-top: 30px;
+  padding-left: 15px;
+}
+.clients-wrapper .clients-row ul li,
+.freelancers-wrapper .freelancers-row ul li,
+.security-wrapper .security-row ul li {
+  margin-bottom: 10px;
+  padding-left: 8px;
+}
+.clients-wrapper .clients-row ul + p,
+.freelancers-wrapper .freelancers-row ul + p,
+.security-wrapper .security-row ul + p {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .clients-wrapper .clients-row .illustration-hire,
+  .clients-wrapper .clients-row .illustration-support,
+  .clients-wrapper .clients-row .illustration-work-safe,
+  .clients-wrapper .clients-row .illustration-staying-safe,
+  .clients-wrapper .clients-row .illustration-keeping-computer-safe,
+  .clients-wrapper .clients-row .illustration-safeguarding,
+  .clients-wrapper .clients-row .illustration-avoid-phishing,
+  .clients-wrapper .clients-row .illustration-protect-from-malware,
+  .clients-wrapper .clients-row .illustration-reporting-concern,
+  .freelancers-wrapper .freelancers-row .illustration-hire,
+  .freelancers-wrapper .freelancers-row .illustration-support,
+  .freelancers-wrapper .freelancers-row .illustration-work-safe,
+  .freelancers-wrapper .freelancers-row .illustration-staying-safe,
+  .freelancers-wrapper .freelancers-row .illustration-keeping-computer-safe,
+  .freelancers-wrapper .freelancers-row .illustration-safeguarding,
+  .freelancers-wrapper .freelancers-row .illustration-avoid-phishing,
+  .freelancers-wrapper .freelancers-row .illustration-protect-from-malware,
+  .freelancers-wrapper .freelancers-row .illustration-reporting-concern,
+  .security-wrapper .security-row .illustration-hire,
+  .security-wrapper .security-row .illustration-support,
+  .security-wrapper .security-row .illustration-work-safe,
+  .security-wrapper .security-row .illustration-staying-safe,
+  .security-wrapper .security-row .illustration-keeping-computer-safe,
+  .security-wrapper .security-row .illustration-safeguarding,
+  .security-wrapper .security-row .illustration-avoid-phishing,
+  .security-wrapper .security-row .illustration-protect-from-malware,
+  .security-wrapper .security-row .illustration-reporting-concern {
+    height: 0;
+    padding-top: 60%;
+  }
+}
+.clients-wrapper .clients-row .illustration-hire,
+.freelancers-wrapper .freelancers-row .illustration-hire,
+.security-wrapper .security-row .illustration-hire {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-hire.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-work-safe,
+.freelancers-wrapper .freelancers-row .illustration-work-safe,
+.security-wrapper .security-row .illustration-work-safe {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-work-safe.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 78% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-support,
+.freelancers-wrapper .freelancers-row .illustration-support,
+.security-wrapper .security-row .illustration-support {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-support.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 77% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-staying-safe,
+.freelancers-wrapper .freelancers-row .illustration-staying-safe,
+.security-wrapper .security-row .illustration-staying-safe {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-staying-safe.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 90% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-keeping-computer-safe,
+.freelancers-wrapper .freelancers-row .illustration-keeping-computer-safe,
+.security-wrapper .security-row .illustration-keeping-computer-safe {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-keeping-computer-safe.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 81% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-safeguarding,
+.freelancers-wrapper .freelancers-row .illustration-safeguarding,
+.security-wrapper .security-row .illustration-safeguarding {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-safeguarding.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 92% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-avoid-phishing,
+.freelancers-wrapper .freelancers-row .illustration-avoid-phishing,
+.security-wrapper .security-row .illustration-avoid-phishing {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-avoid-phishing.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 67% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-protect-from-malware,
+.freelancers-wrapper .freelancers-row .illustration-protect-from-malware,
+.security-wrapper .security-row .illustration-protect-from-malware {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-protect-from-malware.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 83% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.clients-wrapper .clients-row .illustration-reporting-concern,
+.freelancers-wrapper .freelancers-row .illustration-reporting-concern,
+.security-wrapper .security-row .illustration-reporting-concern {
+  background-image: url('../bundles/upworkmarketingsite/trustsafety/img/illustration-reporting-concern.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 65% 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .section-hero h1 {
+    margin-bottom: 26px;
+    font-size: 60px;
+  }
+  .section-hero .section-hero-subheading {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) and (max-width: 1199px) {
+  .clients-wrapper.container,
+  .freelancers-wrapper.container,
+  .security-wrapper.container,
+  .faq-section .container {
+    width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .clients-wrapper .clients-row,
+  .freelancers-wrapper .freelancers-row,
+  .security-wrapper .security-row {
+    padding-bottom: 106px;
+  }
+  .clients-wrapper .clients-row:first-of-type,
+  .freelancers-wrapper .freelancers-row:first-of-type,
+  .security-wrapper .security-row:first-of-type {
+    padding-top: 69px;
+  }
+  .clients-wrapper .clients-row:last-of-type,
+  .freelancers-wrapper .freelancers-row:last-of-type,
+  .security-wrapper .security-row:last-of-type {
+    padding-bottom: 120px;
+  }
+  .clients-wrapper .clients-row h2,
+  .freelancers-wrapper .freelancers-row h2,
+  .security-wrapper .security-row h2 {
+    font-size: 48px;
+    line-height: 58px;
+    color: #494949;
+    margin-top: 0;
+    margin-bottom: 34px;
+  }
+  .clients-wrapper .clients-row h3,
+  .freelancers-wrapper .freelancers-row h3,
+  .security-wrapper .security-row h3 {
+    font-size: 18px;
+    line-height: 22px;
+    color: #494949;
+    margin-top: 0;
+    margin-bottom: 29px;
+  }
+  .clients-wrapper .clients-row p,
+  .freelancers-wrapper .freelancers-row p,
+  .security-wrapper .security-row p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    margin-bottom: 71px;
+  }
+  .clients-wrapper .clients-row p:last-of-type,
+  .freelancers-wrapper .freelancers-row p:last-of-type,
+  .security-wrapper .security-row p:last-of-type {
+    margin-bottom: 0;
+  }
+  .clients-wrapper .clients-row p.clear-space,
+  .freelancers-wrapper .freelancers-row p.clear-space,
+  .security-wrapper .security-row p.clear-space {
+    margin-bottom: 0;
+  }
+  .clients-wrapper .clients-row p.clear-space + p,
+  .freelancers-wrapper .freelancers-row p.clear-space + p,
+  .security-wrapper .security-row p.clear-space + p {
+    margin-top: 28px;
+  }
+  .clients-wrapper .clients-row ul,
+  .freelancers-wrapper .freelancers-row ul,
+  .security-wrapper .security-row ul {
+    margin-top: 28px;
+  }
+  .clients-wrapper .clients-row ul + p,
+  .freelancers-wrapper .freelancers-row ul + p,
+  .security-wrapper .security-row ul + p {
+    margin-top: 28px;
+  }
+  .clients-wrapper .clients-row .illustration-hire,
+  .freelancers-wrapper .freelancers-row .illustration-hire,
+  .security-wrapper .security-row .illustration-hire {
+    background-size: 560px 358px;
+    height: 358px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-work-safe,
+  .freelancers-wrapper .freelancers-row .illustration-work-safe,
+  .security-wrapper .security-row .illustration-work-safe {
+    background-size: 558px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-support,
+  .freelancers-wrapper .freelancers-row .illustration-support,
+  .security-wrapper .security-row .illustration-support {
+    background-size: 556px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-staying-safe,
+  .freelancers-wrapper .freelancers-row .illustration-staying-safe,
+  .security-wrapper .security-row .illustration-staying-safe {
+    background-size: 682px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-keeping-computer-safe,
+  .freelancers-wrapper .freelancers-row .illustration-keeping-computer-safe,
+  .security-wrapper .security-row .illustration-keeping-computer-safe {
+    background-size: 579px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-safeguarding,
+  .freelancers-wrapper .freelancers-row .illustration-safeguarding,
+  .security-wrapper .security-row .illustration-safeguarding {
+    background-size: 663px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-avoid-phishing,
+  .freelancers-wrapper .freelancers-row .illustration-avoid-phishing,
+  .security-wrapper .security-row .illustration-avoid-phishing {
+    background-size: 485px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-protect-from-malware,
+  .freelancers-wrapper .freelancers-row .illustration-protect-from-malware,
+  .security-wrapper .security-row .illustration-protect-from-malware {
+    background-size: 598px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .clients-wrapper .clients-row .illustration-reporting-concern,
+  .freelancers-wrapper .freelancers-row .illustration-reporting-concern,
+  .security-wrapper .security-row .illustration-reporting-concern {
+    background-size: 468px 430px;
+    height: 430px;
+    margin-top: 11px;
+    margin-bottom: 80px;
+  }
+  .faq-section .section-subhero {
+    padding-bottom: 115px;
+  }
+  .faq-section .section-title {
+    margin-bottom: 70px;
+  }
+  .faq-section .accordion .title a {
+    line-height: 24px;
+    padding-right: 100px;
+  }
+  .faq-section .more-questions {
+    margin-top: 74px;
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-hero {
+    background-image: inline-image(
+      'bundles/upworkmarketingsite/trustsafety/img/banner-art.svg'
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1619px) {
+  .section-hero {
+    background-size: 1619px auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row,
+  .freelancers-wrapper .freelancers-row,
+  .security-wrapper .security-row {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .clients-wrapper .clients-row div,
+  .freelancers-wrapper .freelancers-row div,
+  .security-wrapper .security-row div {
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-hire,
+  .freelancers-wrapper .freelancers-row .illustration-hire,
+  .security-wrapper .security-row .illustration-hire {
+    background-size: 560px 358px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-hire,
+  .freelancers-wrapper .freelancers-row .illustration-hire,
+  .security-wrapper .security-row .illustration-hire {
+    background-size: 450px 288px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-work-safe,
+  .freelancers-wrapper .freelancers-row .illustration-work-safe,
+  .security-wrapper .security-row .illustration-work-safe {
+    background-size: 558px 430px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-work-safe,
+  .freelancers-wrapper .freelancers-row .illustration-work-safe,
+  .security-wrapper .security-row .illustration-work-safe {
+    background-size: 450px 348px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-support,
+  .freelancers-wrapper .freelancers-row .illustration-support,
+  .security-wrapper .security-row .illustration-support {
+    background-size: 556px 430px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-support,
+  .freelancers-wrapper .freelancers-row .illustration-support,
+  .security-wrapper .security-row .illustration-support {
+    background-size: 450px 349px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-staying-safe,
+  .freelancers-wrapper .freelancers-row .illustration-staying-safe,
+  .security-wrapper .security-row .illustration-staying-safe {
+    background-size: 552px 331px;
+    height: 331px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-staying-safe,
+  .freelancers-wrapper .freelancers-row .illustration-staying-safe,
+  .security-wrapper .security-row .illustration-staying-safe {
+    background-size: 448px 267px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-keeping-computer-safe,
+  .freelancers-wrapper .freelancers-row .illustration-keeping-computer-safe,
+  .security-wrapper .security-row .illustration-keeping-computer-safe {
+    background-size: 552px 408px;
+    height: 408px;
+    margin-bottom: 2px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-keeping-computer-safe,
+  .freelancers-wrapper .freelancers-row .illustration-keeping-computer-safe,
+  .security-wrapper .security-row .illustration-keeping-computer-safe {
+    background-size: 448px 330px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-safeguarding,
+  .freelancers-wrapper .freelancers-row .illustration-safeguarding,
+  .security-wrapper .security-row .illustration-safeguarding {
+    background-size: 608px 394px;
+    height: 394px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-safeguarding,
+  .freelancers-wrapper .freelancers-row .illustration-safeguarding,
+  .security-wrapper .security-row .illustration-safeguarding {
+    background-size: 420px 272px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-avoid-phishing,
+  .freelancers-wrapper .freelancers-row .illustration-avoid-phishing,
+  .security-wrapper .security-row .illustration-avoid-phishing {
+    background-size: 488px 429px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-avoid-phishing,
+  .freelancers-wrapper .freelancers-row .illustration-avoid-phishing,
+  .security-wrapper .security-row .illustration-avoid-phishing {
+    background-size: 420px 374px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-protect-from-malware,
+  .freelancers-wrapper .freelancers-row .illustration-protect-from-malware,
+  .security-wrapper .security-row .illustration-protect-from-malware {
+    background-size: 564px 408px;
+    height: 408px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-protect-from-malware,
+  .freelancers-wrapper .freelancers-row .illustration-protect-from-malware,
+  .security-wrapper .security-row .illustration-protect-from-malware {
+    background-size: 422px 301px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients-wrapper .clients-row .illustration-reporting-concern,
+  .freelancers-wrapper .freelancers-row .illustration-reporting-concern,
+  .security-wrapper .security-row .illustration-reporting-concern {
+    background-size: 464px 422px;
+    height: 422px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .clients-wrapper .clients-row .illustration-reporting-concern,
+  .freelancers-wrapper .freelancers-row .illustration-reporting-concern,
+  .security-wrapper .security-row .illustration-reporting-concern {
+    background-size: 420px 382px;
+  }
+}

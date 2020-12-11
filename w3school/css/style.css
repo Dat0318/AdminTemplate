@@ -1,0 +1,31 @@
+body {
+  font-family: Helvetiva, snas-serif;
+  font-size: 18px;
+  color: red; }
+
+#container {
+  width: 680px; }
+
+h1 {
+  color: green; }
+
+p {
+  color: green; }
+
+nav {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none; }

@@ -1,0 +1,260 @@
+body {
+  background-color: white;
+  color: #494949;
+}
+.glyphicon {
+  vertical-align: sub;
+}
+.glyphicon-30 {
+  vertical-align: sub;
+}
+.disabled .os-links a {
+  color: #a0a0a0 !important;
+  text-shadow: none;
+  text-decoration: none;
+  outline: none !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+#downloads-wrapper.is-client .freelancer-context {
+  display: none;
+}
+#downloads-wrapper.is-freelancer .client-context {
+  display: none;
+}
+#downloads-wrapper {
+  text-align: center;
+  line-height: 1.4;
+}
+#downloads-wrapper h1 {
+  line-height: 1;
+  color: #494949;
+}
+#downloads-wrapper .megaphone {
+  background-color: #f2f2f2;
+}
+#downloads-wrapper .megaphone .c1 {
+  display: table-cell;
+  vertical-align: middle;
+}
+#downloads-wrapper .megaphone .c2 {
+  display: table-cell;
+  text-align: left;
+  line-height: 2;
+}
+#downloads-wrapper .download-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#downloads-wrapper .download-section > a {
+  max-width: 50%;
+  margin: 0 auto;
+}
+#downloads-wrapper .support-info-wrapper {
+  color: rgb(255, 115, 0);
+}
+#downloads-wrapper .support-info-wrapper .text-bold {
+  font-weight: bold;
+  color: #494949;
+}
+#downloads-wrapper .upwork-screenshot {
+  max-width: 100%;
+  height: auto;
+}
+#downloads-wrapper .beta-link {
+  border-bottom: 1px solid #e0e0e0;
+  color: #494949;
+}
+#downloads-wrapper .platforms-available div.text {
+  color: #7d7d7d;
+  font-weight: 500;
+}
+#downloads-wrapper .platforms-available div.os-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 2.8;
+}
+#downloads-wrapper .platforms-available div.os-links .glyphicon-30 {
+  margin: 0 5px 0 0;
+}
+#downloads-wrapper .platforms-available a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+#downloads-wrapper .platforms-available a:hover span:not(.glyphicon-30),
+#downloads-wrapper .platforms-available a:focus span:not(.glyphicon-30),
+#downloads-wrapper .platforms-available a:active span:not(.glyphicon-30) {
+  text-decoration: underline;
+}
+#downloads-wrapper .white-card {
+  background: #f9f9f9;
+  color: #494949;
+}
+#downloads-wrapper .white-card h2,
+h4 {
+  color: #494949;
+}
+#downloads-wrapper .white-card .row .glyphicon-xlg {
+  color: rgb(255, 115, 0);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+#downloads-wrapper .white-card .row h4 {
+  font-weight: 200;
+}
+@media only screen and (max-width: 320px) {
+  #downloads-wrapper .megaphone .c1 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 568px) {
+  #downloads-wrapper .download-section > * {
+    flex-grow: 1;
+    flex-basis: 0px;
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 568px) {
+  #downloads-wrapper .download-section > * {
+    flex-grow: 1;
+    flex-basis: unset;
+  }
+  #downloads-wrapper .download-section > a {
+    margin-top: 10px;
+    max-width: unset;
+  }
+}
+@media only screen and (max-width: 738px) {
+  #downloads-wrapper .header h1 span {
+    display: block;
+    line-height: 1.4;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 815px) {
+  #downloads-wrapper .header h1 span {
+    display: block;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 568px) {
+  .glyphicon-30 {
+    font-size: 20px !important;
+    line-height: 20px !important;
+  }
+  #downloads-wrapper .header h2 {
+    font-size: 15px;
+  }
+  #downloads-wrapper .megaphone {
+    font-size: 10px;
+  }
+  #downloads-wrapper .support-info-wrapper {
+    font-size: 10px;
+  }
+  #downloads-wrapper .support-info-wrapper .text-bold {
+    font-size: 13px;
+  }
+  #downloads-wrapper .beta-link {
+    font-size: 15px;
+  }
+  #downloads-wrapper .white-card .row .glyphicon-xlg {
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
+  #downloads-wrapper .white-card .col-md-4 {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 568px) and (max-width: 992px) {
+  .glyphicon-30 {
+    font-size: 25px !important;
+    line-height: 25px !important;
+  }
+  #downloads-wrapper h1 {
+    font-size: 40px;
+  }
+  #downloads-wrapper .freelancer-context .header h1 span {
+    white-space: nowrap;
+  }
+  #downloads-wrapper h2 {
+    font-size: 18px;
+  }
+  #downloads-wrapper .megaphone {
+    font-size: 11px;
+  }
+  #downloads-wrapper .support-info-wrapper {
+    font-size: 11px;
+  }
+  #downloads-wrapper .support-info-wrapper .text-bold {
+    font-size: 14px;
+  }
+  #downloads-wrapper .beta-link {
+    font-size: 17px;
+  }
+  #downloads-wrapper .platforms-available {
+    font-size: 14px;
+  }
+  #downloads-wrapper .white-card h2.title {
+    font-size: 34px;
+  }
+  #downloads-wrapper .white-card .row .glyphicon-xlg {
+    font-size: 55px !important;
+    line-height: 55px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .glyphicon-30 {
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+  #downloads-wrapper h1 {
+    font-size: 50px;
+  }
+  #downloads-wrapper h2 {
+    font-size: 24px;
+  }
+  #downloads-wrapper .megaphone {
+    font-size: 12px;
+  }
+  #downloads-wrapper .download-section > * {
+    font-size: 18px;
+    height: 50px;
+    line-height: 1.4;
+  }
+  #downloads-wrapper .support-info-wrapper {
+    font-size: 12px;
+  }
+  #downloads-wrapper .support-info-wrapper .text-bold {
+    font-size: 16px;
+  }
+  #downloads-wrapper .beta-link {
+    font-size: 18px;
+  }
+  #downloads-wrapper .platforms-available {
+    font-size: 16px;
+  }
+  #downloads-wrapper .white-card h2.title {
+    font-size: 40px;
+  }
+  #downloads-wrapper .white-card .row .glyphicon-xlg {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #downloads-wrapper .download-section {
+    display: block;
+  }
+  #downloads-wrapper .download-section > select {
+    float: left;
+    width: 50%;
+  }
+  #downloads-wrapper .download-section > a {
+    width: 48%;
+  }
+}

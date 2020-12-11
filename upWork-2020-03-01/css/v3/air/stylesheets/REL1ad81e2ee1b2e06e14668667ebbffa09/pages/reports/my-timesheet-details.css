@@ -1,0 +1,10 @@
+.oDatePicker.oToField {
+  margin-left: 23px;
+  margin-top: 10px;
+}
+#rangeDate .oLabelDatePicker[for='to1']:before {
+  top: 17px;
+}
+#rangeDate .oLabelDatePicker[for='from1']:before {
+  top: 7px;
+}

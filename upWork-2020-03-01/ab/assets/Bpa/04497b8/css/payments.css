@@ -1,0 +1,611 @@
+.bpa-ach-account-hint {
+  background: url('../images/bank-account.png') no-repeat;
+  width: 324px;
+  height: 84px;
+}
+.bpa-ach-account-hint.hint-check {
+  background-position-y: -168px;
+}
+.bpa-ach-account-hint.hint-routing {
+  background-position-y: 0;
+}
+.bpa-ach-account-hint.hint-account {
+  background-position-y: -84px;
+}
+.payment-img {
+  max-height: 30px;
+}
+up-c-illustration.payment-img {
+  min-width: 37px;
+  min-height: 30px;
+  margin-top: -5px;
+}
+.payment-method-selector .payment-label {
+  flex-wrap: wrap;
+  margin-bottom: -0.3em;
+}
+.payment-method-selector .payment-label .payment-label-first,
+.payment-method-selector .payment-label .payment-label-second {
+  flex: none;
+  max-width: 100% !important;
+  margin-bottom: 0.3em;
+}
+.payment-method-selector .payment-label .payment-label-middle-ellipsis {
+  max-width: calc(100% - 10px) !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.payment-type-img-container {
+  width: 60px;
+  height: 30px;
+}
+.payment-type-img {
+  max-height: 100%;
+}
+.payment-type-ipo-img {
+  --illustration-min-height: 57px;
+  --illustration-min-width: 76px;
+  --illustration-height: 57px;
+  --illustration-width: 76px;
+}
+@media (max-width: 767px) {
+  .payment-type-ipo-img {
+    --illustration-min-height: 38px;
+    --illustration-min-width: 41px;
+    --illustration-height: 38px;
+    --illustration-width: 41px;
+  }
+}
+up-c-modal div.bpa-short-dropdown .dropdown-menu {
+  max-height: 170px !important;
+}
+up-c-modal.bpa-disbursement-methods-popup {
+  --modal-body-padding: 20px 30px;
+  --modal-footer-display: none;
+}
+.payment-img-big {
+  min-width: 60px;
+  min-height: 54px;
+  max-width: 60px;
+  max-height: 54px;
+}
+@media (max-width: 767px) {
+  .payment-img-big {
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    margin-top: 0;
+    padding-top: 3px;
+  }
+}
+.align-items-center .payment-img-big {
+  margin-top: 0 !important;
+}
+.payment-ipo-img {
+  margin-top: -5px;
+  min-width: 37px;
+  min-height: 30px;
+}
+.align-items-center .payment-img-big {
+  padding-top: 0 !important;
+}
+.payment-img-modal {
+  min-width: 108px;
+  min-height: 100px;
+  max-width: 108px;
+  max-height: 100px;
+}
+@media (max-width: 479px) {
+  .payment-img-modal {
+    min-width: 83px;
+    min-height: 80px;
+    max-width: 83px;
+    max-height: 80px;
+  }
+}
+.bpa-help-popover {
+  cursor: help;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.height-icon-size-md {
+  height: 30px;
+}
+.bpa-bottom-border {
+  border-bottom: 1px solid #e0e0e0;
+}
+.checkbox.no-border label,
+.radio.no-border label {
+  border: none;
+}
+.no-hide-animation.ng-hide.ng-hide-animate {
+  display: none !important;
+}
+.bpa-modal-block {
+  z-index: 1060 !important;
+  display: block !important;
+}
+@media (max-width: 767px) {
+  .bpa-full-content-page,
+  .bpa-full-content-page .bpa-collapsed,
+  .bpa-full-content-page .bpa-content,
+  .bpa-full-content-page .bpa-mode-active,
+  .bpa-growable {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+}
+.bpa-growable-all {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+@media (max-width: 767px) {
+  .air-card .bpa-wide,
+  .air-card .bpa-wide-sm,
+  .modal-body .bpa-wide,
+  .modal-body .bpa-wide-sm {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+}
+@media (min-width: 768px) {
+  .air-card .bpa-wide,
+  .modal-body .bpa-wide {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+  }
+}
+@media (max-width: 767px) {
+  .checkbox.last-visible-child label,
+  .radio.last-visible-child label {
+    border-bottom: none;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+@media (max-width: 767px) {
+  .checkbox.bpa-bottom-border-sm label,
+  .radio.bpa-bottom-border-sm label {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+@media (max-width: 767px) {
+  .bpa-settings-page #layout > .container {
+    padding-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .bpa-settings-page .air-card:last-child {
+    margin-bottom: 0;
+  }
+}
+.m-auto-right {
+  margin-right: auto;
+}
+.bpa-mobile-stacked-buttons {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (max-width: 767px) {
+  .bpa-growable-layout #layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+  }
+}
+@media (max-width: 767px) {
+  .bpa-growable-layout.bpa-settings-page .layout-page-content,
+  .bpa-growable-layout.bpa-settings-page main.container,
+  .bpa-growable-layout.bpa-settings-page main.container > div.row,
+  .bpa-growable-layout.bpa-settings-page
+    main.container
+    > div.row
+    > div.col-md-9,
+  .bpa-growable-layout.bpa-settings-page
+    main.container
+    > div.row
+    > div.col-md-9
+    > div[data-ng-view] {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+}
+.bpa-flex-grow-1 {
+  flex-grow: 1;
+}
+.is-mobile-app .bpa-m-0-mobile-app {
+  margin: 0 !important;
+}
+up-c-modal.bpa-modal-with-alerts {
+  --modal-body-padding: 0 30px 30px 30px;
+  --modal-mobile-body-padding: 0 15px 15px 15px;
+}
+up-c-dropdown.bpa-select {
+  display: inline;
+}
+@media (min-width: 480px) {
+  up-c-dropdown.bpa-select .dropdown.open .dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+input.bpa-card-icon {
+  padding-left: 62px;
+}
+.bpa-card-number-row .bpa-card-number {
+  padding-left: 43px;
+}
+.bpa-cards-icon-img {
+  background: url('../images/card-number-icons-v2.svg') no-repeat;
+}
+.bpa-cards-icon-mop-list {
+  margin-top: -10px !important;
+  margin-left: 0 !important;
+  position: static !important;
+  height: 30px !important;
+}
+.bpa-cards-icon {
+  background-size: 182px;
+  position: absolute;
+  display: block;
+  width: 29px;
+  height: 32px;
+  margin-top: 2px;
+  margin-left: 17px;
+  background-position-x: -136px;
+  background-position-y: 6px;
+}
+.bpa-cards-icon-visa {
+  background-position-x: 0;
+  width: 34px;
+}
+.bpa-cards-icon-mastercard,
+.bpa-cards-icon-mc {
+  background-position-x: -34px;
+  width: 34px;
+}
+.bpa-cards-icon-amex {
+  background-position-x: -68px;
+  width: 34px;
+}
+.bpa-cards-icon-discover {
+  background-position-x: -102px;
+  width: 34px;
+}
+.bpa-payment-icon-paypal {
+  margin-top: 4px;
+  width: 96px;
+  height: 25px;
+  background: url(../images/paypal-small.png) no-repeat;
+}
+.bpa-card-lock-icon {
+  background-size: 182px;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 32px;
+  float: right;
+  margin-top: -33px;
+  left: -130px;
+  background-position-x: -166px;
+}
+.bpa-card-lock-icon:after {
+  content: 'Securely Stored';
+  width: 143px;
+  display: inline-block;
+  margin-left: 28px;
+  color: #898989;
+  line-height: 28px;
+}
+.bpa-card-icon-list {
+  position: relative;
+  float: right;
+  top: -79px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: -30px;
+}
+.bpa-primary-payment-icon {
+  position: relative;
+  margin-left: 0;
+  display: inline-block;
+  margin-right: 14px;
+  top: -12px;
+  float: left;
+}
+.bpa-secured-field-form-control {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+.bpa-secured-field-form-control.focused {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  border-color: rgb(255, 115, 0);
+}
+.bpa-secured-field-form-control.ng-dirty.ng-invalid {
+  border-color: #d50000 !important;
+}
+.bpa-secured-field-form-control.ng-dirty.ng-invalid.focused {
+  box-shadow: none;
+}
+.bpa-primary-payment-area {
+  min-height: 56px;
+  padding: 5px 0;
+}
+.bpa-reset-min-width {
+  min-width: 0 !important;
+}
+.bpa-min-height-auto {
+  min-height: 0 !important;
+}
+@media (max-width: 575px) {
+  .bpa-card-lock-icon {
+    left: -6px;
+  }
+  .bpa-card-lock-icon:after {
+    display: none;
+  }
+  .bpa-responsive-smaller-width .col-sm-6 {
+    width: 50%;
+  }
+}
+.bpa-modern-bank-account .bpa-securely-stored {
+  height: 20px;
+  display: inline-block;
+  padding-left: 18px;
+  background: url(../images/card-number-icons-v2.svg) no-repeat -108px 0;
+  background-size: 118.9px;
+}
+.bpa-modern-bank-account .bpa-bank-account-numbers-container {
+  max-width: 448px;
+  max-height: 84px;
+}
+.bpa-modern-bank-account .bpa-img-bank-account-numbers {
+  width: 100%;
+  height: 100%;
+}
+.bpa-modern-bank-account .bpa-ajax-loader.ng-hide {
+  display: none !important;
+}
+.form-group .bpa-has-async-indicator {
+  padding-right: 40px;
+}
+.form-group .bpa-indicator-anchor {
+  float: right;
+}
+.bpa-indicator-anchor .bpa-indicator-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: auto;
+  right: auto;
+  margin: -30px 0 0 -30px;
+}
+.bpa-subscription-form {
+  min-height: 316px;
+}
+li.bpa-list-checked {
+  padding-left: 25px;
+}
+li.bpa-list-checked span.glyphicon.air-icon-check {
+  display: inline-block;
+  margin-left: -25px;
+}
+.bpa-add-primary-payment {
+  --modal-body-padding: 0;
+  --modal-mobile-body-padding: 0;
+  --modal-footer-display: none;
+}
+.bpa-add-primary-payment .eo-blocker.ng-leave-prepare {
+  display: none !important;
+}
+.bpa-add-primary-payment .radio label {
+  border: none;
+}
+.bpa-add-primary-payment .bpa-form-page {
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transform: translateX(0);
+  opacity: 1;
+}
+.bpa-add-primary-payment .bpa-form-page.ng-hide-add {
+  height: 0 !important;
+  display: none !important;
+}
+.bpa-add-primary-payment .forward-slide .ng-hide {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.bpa-add-primary-payment .backward-slide .ng-hide {
+  transform: translateX(50%);
+  opacity: 0;
+}
+.bpa-add-primary-payment .bpa-content {
+  min-height: 152px;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  opacity: 1;
+}
+.bpa-add-primary-payment .ng-hide .bpa-content {
+  opacity: 0;
+}
+.bpa-add-primary-payment .bpa-method-choice {
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.bpa-add-primary-payment .bpa-method-choice:not(:first-child) {
+  border-top: 1px solid #e0e0e0;
+}
+.bpa-add-primary-payment .bpa-collapsed {
+  transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.bpa-add-primary-payment .bpa-collapsed.ng-hide {
+  display: block !important;
+  min-height: 0;
+  height: 0;
+}
+.bpa-add-primary-payment .bpa-mode-inactive {
+  background-color: #f9f9f9;
+}
+.bpa-add-primary-payment .bpa-mode-inactive .bpa-collapsed {
+  overflow: hidden;
+}
+.bpa-add-primary-payment .bpa-mode-active {
+  background-color: #fff;
+}
+.bpa-add-primary-payment .bpa-hide-loading {
+  display: none !important;
+}
+.bpa-add-primary-payment .bpa-hide-loading .bpa-collapsed,
+.bpa-add-primary-payment .bpa-hide-loading .bpa-method-choice {
+  transition: none;
+}
+.bpa-add-primary-payment .bpa-upwork-balance {
+  color: #767676;
+}
+.bpa-add-primary-payment .bpa-security-banner {
+  min-height: 42px;
+  background-color: #ebf7ec;
+  padding: 10px;
+  text-align: center;
+}
+.bpa-add-primary-payment .bpa-security-banner img {
+  height: 23px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+@media (min-width: 480px) {
+  .bpa-add-primary-payment
+    .states-select
+    up-c-dropdown.bpa-select
+    .dropdown.open
+    .dropdown-menu {
+    max-height: 160px;
+  }
+}
+@media (max-width: 479px) {
+  .bpa-add-primary-payment .bpa-security-banner {
+    text-align: initial;
+    padding-left: 41px;
+  }
+  .bpa-add-primary-payment .bpa-security-banner img {
+    margin-left: -30px;
+  }
+}
+#bpa-method-ACH .bpa-content {
+  min-height: 134px;
+}
+.is-fullscreen-open
+  > .paypal-checkout-sandbox.paypal-checkout-sandbox.paypal-checkout-sandbox.paypal-checkout-sandbox.paypal-checkout-sandbox {
+  display: initial !important;
+}
+.bpa-plaid-splash-screen {
+  --modal-header-display: none;
+  --modal-footer-display: none;
+}
+.bpa-plaid-redirect {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.bpa-plaid-redirect img {
+  max-width: 295px;
+  height: 138px;
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .bpa-plaid-redirect img {
+    width: 100%;
+    height: auto !important;
+  }
+}
+div[content='amexSecurityCodeHint.html'].popover,
+div[content='disbursementReservedAmountHint.html'].popover,
+div[content='otherSecurityCodeHint.html'].popover {
+  z-index: 3000;
+}
+.bpa-full-content-page .bpa-hide-on-full-content {
+  display: none;
+  min-height: 0;
+  height: 0;
+}
+.bpa-full-content-page .bpa-method-choice.bpa-mode-active {
+  border-top: 0 !important;
+}
+.bpa-full-content-page .bpa-form-messages {
+  padding-top: 2px !important;
+}
+.bpa-full-content-page .bpa-collapsed {
+  height: auto !important;
+}
+.bpa-address .tokenizer-wrapper > .tokenizer-token-list {
+  margin: 0 !important;
+}
+.bpa-rounded-muted-block {
+  color: #656565;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #f2f2f2;
+  padding: 15px;
+  text-align: center;
+}
+.bpa-deposit-mop-list .mop-icon-column {
+  width: 36px;
+}
+.bpa-deposit-mop-list .mop-icon-column .payment-img {
+  margin-top: -5px;
+}
+.bpa-deposit-mop-list .mop-menu-column {
+  margin-top: -3px;
+}
+@media (max-width: 767px) {
+  .bpa-deposit-mop-list .mop-currency-column,
+  .bpa-deposit-mop-list .mop-icon-column {
+    margin-right: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .bpa-deposit-mop-list .mop-icon-column {
+    margin-right: 10px;
+  }
+  .bpa-deposit-mop-list .mop-currency-column {
+    margin-right: 30px;
+  }
+}
+.bpa-verify-mop-modal [slot='body'] {
+  min-height: 376px;
+}
+.bpa-verify-mop-modal [slot='body'].no-primary-selection {
+  min-height: 328px;
+}
+up-c-modal.bpa-modal-add-ipo {
+  --modal-body-padding: 0px 30px 10px 30px;
+  --modal-mobile-body-padding: 0px 15px 15px 15px;
+}
+bpa-alert-messages {
+  display: block;
+}
+#add-ipo-block {
+  min-height: 324px;
+}
+.bpa-gc-block {
+  z-index: 1510 !important;
+  display: block !important;
+}

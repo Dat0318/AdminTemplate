@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "recursive-annotation";
+  src:url("fonts/recursive-annotation.eot");
+  src:url("fonts/recursive-annotation.eot?#iefix") format("embedded-opentype"),
+    url("fonts/recursive-annotation.woff") format("woff"),
+    url("fonts/recursive-annotation.ttf") format("truetype"),
+    url("fonts/recursive-annotation.svg#recursive-annotation") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "recursive-annotation" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ran-font-"]:before,
+[class*=" ran-font-"]:before {
+  font-family: "recursive-annotation" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ran-font-linea-software-rectangle:before {
+  content: "a";
+}
+.ran-font-linea-software-oval:before {
+  content: "b";
+}
+.ran-font-linea-software-pencil:before {
+  content: "c";
+}
+.ran-font-linea-software-eyedropper:before {
+  content: "d";
+}
+.ran-font-linea-basic-text-bubble:before {
+  content: "e";
+}
+.ran-font-linea-basic-pin:before {
+  content: "f";
+}
+.ran-font-linea-arrows-x:before {
+  content: "h";
+}
+.ran-font-mouse-cursor:before {
+  content: "g";
+}
+.ran-font-linea-arrows-10:before {
+  content: "i";
+}
+.ran-font-linea-arrows-10-1:before {
+  content: "j";
+}
+.ran-font-linea-basic-trash-can:before {
+  content: "k";
+}
