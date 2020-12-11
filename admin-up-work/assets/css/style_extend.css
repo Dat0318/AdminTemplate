@@ -1,0 +1,65 @@
+.card-extend {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 15px 0 15px;
+}
+.card-extend .see-record {
+    vertical-align: middle;
+}
+.card-extend .see-record label {
+    margin: 0;
+}
+.card-extend .see-record select {
+    border-radius: 8px;
+    outline: none;
+    padding-left: 3px;
+}
+.card-extend .see-record select option {
+}
+
+.card-extend .form-search {
+
+}
+.card-extend .form-search form {
+    position: relative;
+    border: 1px solid #111;
+    border-radius: 12px;
+    min-width: 250px;
+}
+.card-extend .form-search form .input-search {
+    width: 81%;
+    border: none;
+    border-radius: 12px;
+    padding: 0 3px;
+}
+.card-extend .form-search form .btn-search {
+    position: absolute;
+    border: none;
+    outline: none;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: unset;
+}
+.card-extend .form-search form .btn-search i {
+
+}
+
+.pagination {
+    padding: 0px 15px 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.pagination .pagination-list {
+    display: flex;
+    list-style-type: none;
+}
+.pagination .pagination-list a {padding: 0px 5px;}
+.pagination .pagination-list span{
+    padding: 0px 4px;
+}
+.pagination-acction {
+    background-color: #ececec;
+    border-radius: 9px;
+}
